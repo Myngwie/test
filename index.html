@@ -589,6 +589,7 @@
         'หน้าเรือ': 'boatFront',
         'อาหารตามสั่ง': 'customFood',
         'เด็กเสิร์ฟ': 'staffChild'
+        'พี่หยี' : Yayee' 
       };
       const k = catKeyMap[thCat];
       return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
@@ -773,7 +774,14 @@
   { name: 'ซอสแมคกี้', unit: 'ขวด' }
 ]
     };
-
+'เด็กเสิร์ฟ': [
+   { name: 'แสงโสม', unit: 'ขวด/แพ็ค' }, { name: 'น้ำโค้ก', unit: 'ขวด/ลัง' },
+  { name: 'น้ำแดง', unit: 'ขวด/ลัง' }, { name: 'น้ำเขียว', unit: 'ขวด/ลัง' }, { name: 'น้ำส้ม', unit: 'ขวด/ลัง' },
+  { name: 'น้ำสไปร์ท Sprite', unit: 'ขวด/ลัง' }, { name: 'โค้กซีโร่', unit: 'ขวด/แพ็ค' }, { name: 'น้ำเก๊กฮวย', unit: 'ถุง' },
+  { name: 'น้ำบ๊วย', unit: 'ถุง' }, { name: 'น้ำกระเจี๊ยบ', unit: 'ถุง' }, { name: 'โอเลี้ยง', unit: 'ถุง' },
+  { name: 'น้ำชาเขียว', unit: 'ถุง' }, { name: 'น้ำชาไทย', unit: 'ถุง' }, { name: 'น้ำชามะนาว', unit: 'ถุง' },
+  { name: 'น้ำลำไย', unit: 'ถุง' },
+  ]
     function getUnitGroup_(unitStr){
       const u = (unitStr || "").trim();
       if (u === "กิโลกรัม/กรัม" || u === "กรัม/กิโลกรัม") return "weight_kg";
