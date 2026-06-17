@@ -91,6 +91,16 @@
               </svg>
             </div>
           </button>
+
+          <button onclick="selectCategory('ผักสด')" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🥬</div>
+              <div class="text-left">
+                <p class="text-xl font-bold">ผักสด</p>
+                <p class="text-green-100 text-sm">เช็คสต๊อกผักสด</p>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -193,6 +203,7 @@
                 <option value="แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</option>
                 <option value="เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</option>
                 <option value="ของสด">ของสด</option>
+                <option value="ผักสด">ผักสด</option>
               </select>
             </div>
           </div>
@@ -581,7 +592,8 @@
       const catKeyMap = {
         'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
         'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'customFood',
-        'ของสด': 'staffChild'
+        'ของสด': 'staffChild',
+        'ผักสด': 'staffChild'
       };
       const k = catKeyMap[thCat];
       return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
@@ -649,6 +661,27 @@
   { name: 'ถุงดำ', unit: 'แพค' }, { name: 'กระดาษไลแมน', unit: 'ม้วน'  },
   {name: 'กระดาษเครื่องปริ้น', unit: 'ม้วน' },
 
+ ],
+'ผักสด': [
+{name:'ข่า',unit:'กิโลกรัม'},
+{name:'ตะไคร้',unit:'กิโลกรัม'},
+{name:'ใบมะกรูด',unit:'กิโลกรัม'},
+{name:'กวางตุ้ง',unit:'กิโลกรัม'},
+{name:'ชะพลู',unit:'กิโลกรัม'},
+{name:'ชีลาว',unit:'กิโลกรัม'},
+{name:'ใบแมงลัก',unit:'กิโลกรัม'},
+{name:'สะระแหน่',unit:'กิโลกรัม'},
+{name:'พริกลาว',unit:'กิโลกรัม'},
+{name:'ใบย่านาง',unit:'กิโลกรัม'},
+{name:'บุ้งจีน',unit:'กิโลกรัม'},
+{name:'ผักกระเฉด',unit:'กิโลกรัม'},
+{name:'ชะอม',unit:'กิโลกรัม'},
+{name:'แตง',unit:'กิโลกรัม'},
+{name:'ฟักทอง',unit:'กิโลกรัม'},
+{name:'รายการวันเว้นวัน',unit:''},
+{name:'หน่อไม้ซุป',unit:'กิโลกรัม'},
+{name:'หน่อไม้ตำ',unit:'กิโลกรัม'},
+{name:'ปลาร้าถุง',unit:'ถุง'}
  ]
     };
 
@@ -1097,8 +1130,8 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500' };
-      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬' };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1122,7 +1155,7 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500' };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1469,7 +1502,7 @@ function renderHistory() {
   noHistory.classList.add('hidden');
 
   const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
-  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬' };
 
   listEl.innerHTML = filtered.map(record => `
     <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
