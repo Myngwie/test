@@ -688,7 +688,7 @@
     function getUnitGroup_(unitStr){
       const u = (unitStr || "").trim();
       if (u === "กิโลกรัม/กรัม" || u === "กรัม/กิโลกรัม") return "weight_kg";
-      if (u === "ขวด/แพ็ค") return "bottle_pack12";
+      if (u === "ขวด/แพ็ค" || u === "ขวด/แพค") return "bottle_pack12";
       if (u === "ขวด/ลัง") return "bottle_crate24";
       return null;
     }
@@ -740,7 +740,7 @@
         return { qty: n, unit: 'ขวด' };
       }
 
-      if (opts.includes('ขวด') && opts.includes('แพ็ค')) {
+      if (opts.includes('ขวด') && (opts.includes('แพ็ค') || opts.includes('แพค'))) {
         if (u === 'แพ็ค') return { qty: n * 12, unit: 'ขวด' };
         return { qty: n, unit: 'ขวด' };
       }
