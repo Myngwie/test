@@ -79,12 +79,12 @@
             </div>
           </button>
 
-          <button onclick="selectCategory('ของสด')" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+          <button onclick="selectCategory('พี่หยี เช็คทุกวัน')" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
             <div class="flex items-center gap-4">
               <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🧑‍🍳</div>
               <div class="text-left">
-                <p id="cat-staff" class="text-xl font-bold">ของสด</p>
-                <p id="cat-staff-desc" class="text-blue-100 text-sm">เช็คสต็อกของสด</p>
+                <p id="cat-staff" class="text-xl font-bold">พี่หยี เช็คทุกวัน</p>
+                <p id="cat-staff-desc" class="text-blue-100 text-sm">เช็คสต็อกพี่หยี เช็คทุกวัน</p>
               </div>
               <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -228,7 +228,7 @@
                 <option value="" id="opt-all">ทั้งหมด</option>
                 <option value="แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</option>
                 <option value="เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</option>
-                <option value="ของสด">ของสด</option>
+                <option value="พี่หยี เช็คทุกวัน">พี่หยี เช็คทุกวัน</option>
                 <option value="ผักสด">ผักสด</option>
                 <option value="เข๋ง(เช็คทุกวัน)">เข๋ง(เช็คทุกวัน)</option>
                 <option value="ลา(เช็คทุกวัน)">ลา(เช็คทุกวัน)</option>
@@ -282,8 +282,8 @@
         boatFrontDesc: 'เช็คสต็อกวัตถุดิบแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
         customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
         customFoodDesc: 'เช็คสต็อกเจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
-        staffChild: 'ของสด',
-        staffChildDesc: 'เช็คสต็อกของสด',
+        staffChild: 'พี่หยี เช็คทุกวัน',
+        staffChildDesc: 'เช็คสต็อกพี่หยี เช็คทุกวัน',
         backHome: 'กลับหน้าหลัก',
         staffName: 'ผู้เช็คสต็อก',
         enterName: 'กรุณากรอกชื่อผู้ทำการเช็คสต็อก',
@@ -620,7 +620,7 @@
       const catKeyMap = {
         'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
         'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'customFood',
-        'ของสด': 'staffChild',
+        'พี่หยี เช็คทุกวัน': 'staffChild',
         'ผักสด': 'staffChild'
       };
       const k = catKeyMap[thCat];
@@ -673,7 +673,7 @@
 {name:'ข้าวสาร',unit:'ถัง'}
 ],
 
-'ของสด': [
+'พี่หยี เช็คทุกวัน': [
   { name: 'สันคอบด', unit: 'ถ้วย' }, { name: 'สันคอ', unit: 'ถ้วย' },
 { name: 'โครงแก้ว', unit: 'ถุง' }, { name: 'เล้ง', unit: 'ถุง' },
 { name: 'ไส้อ่อน', unit: 'ถ้วย' }, { name: 'ตับหมู', unit: 'ถุง' },
@@ -1175,8 +1175,8 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
-      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1200,7 +1200,7 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1546,8 +1546,8 @@ function renderHistory() {
 
   noHistory.classList.add('hidden');
 
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
-  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
 
   listEl.innerHTML = filtered.map(record => `
     <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
@@ -1584,7 +1584,7 @@ function showHistoryDetail(idOrBackendId) {
 
   const previousRecord = getPreviousRecord(record.category, record.date);
   const t = translations[currentLanguage];
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
 
   const content = document.getElementById('history-detail-content');
   content.innerHTML = `
