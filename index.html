@@ -587,7 +587,7 @@
       return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
     }
 
-    const stockItems = 
+    const stockItems = {
       'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': [
 { name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ชิ้น'},{ name:'ฝาเขียว',unit:'ชิ้น'},
 { name:'น้ำปลาเล็ก',unit:'ชิ้น'},{ name:'น้ำปลาใหญ่',unit:'ชิ้น'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ชิ้น'},
@@ -599,7 +599,7 @@
 { name:'ทิชชู',unit:'ชิ้น'},{ name:'หลอดสั้น',unit:'ชิ้น'},{ name:'หลอดยาว',unit:'ชิ้น'}
 ],
 'อาหารตามสั่ง': [
-        { name: 'ผักสด', unit: 'กิโลกรัม' },
+        { name: 'ผักสด', unit: '' },
         { name: 'ใบโหระพา', unit: 'กิโลกรัม' },
         { name: 'ผักชีใบเลื่อย', unit: 'กิโลกรัม' },
         { name: 'ผักบุ้ง (ยังไม่ตัด)', unit: 'กิโลกรัม' },
@@ -1693,5 +1693,3 @@ init();
 </script>
 </body>
 </html>
-
-
