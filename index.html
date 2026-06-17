@@ -101,7 +101,33 @@
               </div>
             </div>
           </button>
-        </div>
+
+          <button onclick="selectCategory('เข๋ง(เช็คทุกวัน)')" class="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🥗</div>
+              <div class="text-left">
+                <p class="text-xl font-bold">เข๋ง(เช็คทุกวัน)</p>
+                <p class="text-teal-100 text-sm">เช็คสต๊อกเข๋ง(เช็คทุกวัน)</p>
+              </div>
+              <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+        
+          <button onclick="selectCategory('ลา(เช็คทุกวัน)')" class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🥩</div>
+              <div class="text-left">
+                <p class="text-xl font-bold">ลา(เช็คทุกวัน)</p>
+                <p class="text-red-100 text-sm">เช็คสต๊อกลา(เช็คทุกวัน)</p>
+              </div>
+              <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+</div>
       </div>
     </div>
 
@@ -204,6 +230,8 @@
                 <option value="เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</option>
                 <option value="ของสด">ของสด</option>
                 <option value="ผักสด">ผักสด</option>
+                <option value="เข๋ง(เช็คทุกวัน)">เข๋ง(เช็คทุกวัน)</option>
+                <option value="ลา(เช็คทุกวัน)">ลา(เช็คทุกวัน)</option>
               </select>
             </div>
           </div>
@@ -663,26 +691,46 @@
 
  ],
 'ผักสด': [
-{name:'ข่า',unit:'กิโลกรัม'},
-{name:'ตะไคร้',unit:'กิโลกรัม'},
-{name:'ใบมะกรูด',unit:'กิโลกรัม'},
-{name:'กวางตุ้ง',unit:'กิโลกรัม'},
-{name:'ชะพลู',unit:'กิโลกรัม'},
-{name:'ชีลาว',unit:'กิโลกรัม'},
-{name:'ใบแมงลัก',unit:'กิโลกรัม'},
-{name:'สะระแหน่',unit:'กิโลกรัม'},
-{name:'พริกลาว',unit:'กิโลกรัม'},
-{name:'ใบย่านาง',unit:'กิโลกรัม'},
-{name:'บุ้งจีน',unit:'กิโลกรัม'},
-{name:'ผักกระเฉด',unit:'กิโลกรัม'},
-{name:'ชะอม',unit:'กิโลกรัม'},
-{name:'แตง',unit:'กิโลกรัม'},
-{name:'ฟักทอง',unit:'กิโลกรัม'},
+{name:'ข่า',unit:'ถุง'},
+{name:'ตะไคร้',unit:'ถุง'},
+{name:'ใบมะกรูด',unit:'ถุง'},
+{name:'กวางตุ้ง',unit:'ถุง'},
+{name:'ชะพลู',unit:'ถุง'},
+{name:'ชีลาว',unit:'ถุง'},
+{name:'ใบแมงลัก',unit:'ถุง'},
+{name:'สะระแหน่',unit:'ถุง'},
+{name:'พริกลาว',unit:'ถุง'},
+{name:'ใบย่านาง',unit:'ถุง'},
+{name:'บุ้งจีน',unit:'ถุง'},
+{name:'ผักกระเฉด',unit:'ถุง'},
+{name:'ชะอม',unit:'ถุง'},
+{name:'แตง',unit:'ถุง'},
+{name:'ฟักทอง',unit:'ถุง'},
 {name:'รายการวันเว้นวัน',unit:''},
-{name:'หน่อไม้ซุป',unit:'กิโลกรัม'},
-{name:'หน่อไม้ตำ',unit:'กิโลกรัม'},
+{name:'หน่อไม้ซุป',unit:'ถุง'},
+{name:'หน่อไม้ตำ',unit:'ถุง'},
 {name:'ปลาร้าถุง',unit:'ถุง'}
+ ],
+'เข๋ง(เช็คทุกวัน)': [
+{name:'หอยดอง',unit:'ถุง'},
+{name:'ปูเค็ม',unit:'ถุง'},
+{name:'ถั่วงอก',unit:'ถุง'},
+{name:'ไข่เค็ม',unit:'ถุง'},
+{name:'ไข่ไก่',unit:'ถุง'}
+ ],
+'ลา(เช็คทุกวัน)': [
+{name:'เนื้อย่าง',unit:'กรัม/กิโลกรัม'},
+{name:'เนื้อลาบ',unit:'กรัม/กิโลกรัม'},
+{name:'ผ้าขี้ริ้ว',unit:'กรัม/กิโลกรัม'},
+{name:'ตับ',unit:'กรัม/กิโลกรัม'},
+{name:'น่องลาย',unit:'กรัม/กิโลกรัม'},
+{name:'ต้ม',unit:'กรัม/กิโลกรัม'},
+{name:'พริกป่น',unit:'ถุง'},
+{name:'กระเทียม',unit:'ถุง'},
+{name:'พริกแห้ง',unit:'ถุง'}
  ]
+
+
     };
 
     function getUnitGroup_(unitStr){
@@ -1130,8 +1178,8 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500' };
-      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1155,7 +1203,7 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1502,7 +1550,7 @@ function renderHistory() {
   noHistory.classList.add('hidden');
 
   const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
-  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
 
   listEl.innerHTML = filtered.map(record => `
     <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
