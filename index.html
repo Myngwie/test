@@ -31,19 +31,12 @@
 
 <body class="h-full bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
   <div id="app" class="h-full w-full overflow-auto">
-    <!-- Language Selector -->
-    <div class="fixed top-4 right-4 z-50 lang-selector">
-      <button onclick="setLanguage('th')" class="lang-btn active" id="btn-th" title="ไทย">ไทย</button>
-      <button onclick="setLanguage('lo')" class="lang-btn" id="btn-lo" title="ລາວ">ລາວ</button>
-      <button onclick="setLanguage('my')" class="lang-btn" id="btn-my" title="မြန်မာ">မြန်</button>
-    </div>
-
     <!-- หน้าหลัก -->
     <div id="home-page" class="min-h-full p-4 md:p-6 pt-20">
       <div class="max-w-lg mx-auto">
         <div class="flex items-center justify-between mb-8">
           <div>
-            <h1 id="shop-title" class="text-2xl md:text-3xl font-bold text-orange-800">🍜 ก๋วยเตี๋ยวเรือรสจนา</h1>
+            <h1 id="shop-title" class="text-2xl md:text-3xl font-bold text-orange-800">🍜 ส้มตำสี่แยกแซ่บนัว</h1>
             <p id="txt-daily-check" class="text-orange-600 text-sm mt-1">เช็คสต็อกประจำวัน</p>
           </div>
           <button onclick="showHistory()" class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition-all text-orange-700 font-medium">
@@ -60,12 +53,12 @@
         </div>
 
         <div class="space-y-4">
-          <button onclick="selectCategory('หน้าเรือ')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+          <button onclick="selectCategory('แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
             <div class="flex items-center gap-4">
               <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🚣</div>
               <div class="text-left">
-                <p id="cat-boat" class="text-xl font-bold">หน้าเรือ</p>
-                <p id="cat-boat-desc" class="text-orange-100 text-sm">เช็คสต็อกวัตถุดิบหน้าเรือ</p>
+                <p id="cat-boat" class="text-xl font-bold">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</p>
+                <p id="cat-boat-desc" class="text-orange-100 text-sm">เช็คสต็อกวัตถุดิบแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</p>
               </div>
               <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -197,7 +190,7 @@
               <label id="txt-category-label" class="block text-sm font-medium text-gray-700 mb-2">หมวดหมู่</label>
               <select id="filter-category" onchange="filterHistory()" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
                 <option value="" id="opt-all">ทั้งหมด</option>
-                <option value="หน้าเรือ">หน้าเรือ</option>
+                <option value="แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</option>
                 <option value="อาหารตามสั่ง">อาหารตามสั่ง</option>
                 <option value="เด็กเสิร์ฟ">เด็กเสิร์ฟ</option>
               </select>
@@ -236,7 +229,7 @@
   </div>
 
   <script>
-    const GOOGLE_SHEET_WEBAPP_URL = "แปะ apps script ตรงนี้";
+    const GOOGLE_SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzwv920HkBAVAd_fTkm2hZ1wA4g_iLtR4H53P84cG1oHkLh33F3hxNkNhzSz3olxGO3vA/exec";
     const SHEET_POLL_MS = 60000;
 
     let currentLanguage = 'th';
@@ -246,8 +239,8 @@
         stockCheck: 'ระบบเช็คสต็อก',
         dailyCheck: 'เช็คสต็อกประจำวัน',
         history: 'ประวัติ',
-        boatFront: 'หน้าเรือ',
-        boatFrontDesc: 'เช็คสต็อกวัตถุดิบหน้าเรือ',
+        boatFront: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
+        boatFrontDesc: 'เช็คสต็อกวัตถุดิบแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
         customFood: 'อาหารตามสั่ง',
         customFoodDesc: 'เช็คสต็อกวัตถุดิบอาหารตามสั่ง',
         staffChild: 'เด็กเสิร์ฟ',
@@ -332,8 +325,8 @@
         stockCheck: 'စတော့စစ်ဆေးမှုစနစ်',
         dailyCheck: 'နေ့စဉ်စတော့စစ်ခြင်း',
         history: 'မှတ်တမ်း',
-        boatFront: 'หน้าเรือ',
-        boatFrontDesc: 'หน้าเรือရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
+        boatFront: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
+        boatFrontDesc: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
         customFood: 'อาหารตามสั่ง',
         customFoodDesc: 'อาหารตามสั่งရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
         staffChild: 'เด็กเสิร์ฟ',
@@ -586,7 +579,7 @@
     function tCategory(thCat) {
       if (currentLanguage === 'th') return thCat;
       const catKeyMap = {
-        'หน้าเรือ': 'boatFront',
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
         'อาหารตามสั่ง': 'customFood',
         'เด็กเสิร์ฟ': 'staffChild'
       };
@@ -595,28 +588,17 @@
     }
 
     const stockItems = {
-      'หน้าเรือ': [
-        { name: 'เส้นเล็ก', unit: 'ห่อ' }, { name: 'เส้นใหญ่', unit: 'ห่อ' }, { name: 'เส้นหมี่ขาว', unit: 'ก้อน' },
-        { name: 'บะหมี่เหลือง', unit: 'ห่อ' }, { name: 'วุ้นเส้น', unit: 'ห่อ' }, { name: 'มาม่า', unit: 'ก้อน' },
-        { name: 'เนื้อสด', unit: 'กิโลกรัม' }, { name: 'เนื้อเปื่อย', unit: 'กิโลกรัม' }, { name: 'ตับวัว', unit: 'กิโลกรัม' },
-        { name: 'เลือดวัว', unit: 'ขวด' }, { name: 'ลูกชิ้นเนื้อ', unit: 'กิโลกรัม' }, { name: 'หมูสด', unit: 'กิโลกรัม' },
-        { name: 'หมูเปื่อย', unit: 'กิโลกรัม' }, { name: 'ตับหมู', unit: 'กิโลกรัม' }, { name: 'เลือดหมู', unit: 'ขวด' },
-        { name: 'ลูกชิ้นหมู', unit: 'กิโลกรัม' }, { name: 'หัวน้ำเชื้อเนื้อ', unit: 'โหล' }, { name: 'เครื่องเทศเนื้อ', unit: 'โหล' },
-        { name: 'หัวน้ำเชื้อหมู', unit: 'โหล' }, { name: 'เครื่องเทศหมู', unit: 'โหล' }, { name: 'น้ำปรุงก๋วยเตี๋ยว', unit: 'โหล' },
-        { name: 'ผักบุ้ง (ตัดแล้ว)', unit: 'กิโลกรัม' }, { name: 'ถั่วคั่ว', unit: 'กิโลกรัม' }, { name: 'น้ำปลา', unit: 'แกนลอน' },
-        { name: 'พริกน้ำส้ม', unit: 'โหล' }, { name: 'พริกคั่ว', unit: 'ถัง' }, { name: 'ซีอิ๊วดำ', unit: 'ขวด' },
-        { name: 'ถั่วงอก', unit: 'กิโลกรัม' }, { name: 'ถั่วลิสงดิบ', unit: 'ถุง' }, { name: 'ถ้วยใส่น้ำซุป 9*14 นิ้ว', unit: 'แพ็ค' },
-        { name: 'ถ้วยใส่ชามก๋วยเตี๋ยว', unit: 'แพ็ค' }, { name: 'ช่องฟรีซเซอร์', unit: '' },
-        { name: 'เนื้อสด (ที่หมักแล้ว)', unit: 'กิโลกรัม' }, { name: 'เนื้อสด (ที่ยังไม่หมักหรือยังไม่ถูกตัด)', unit: 'กิโลกรัม' },
-        { name: 'เนื้อเปื่อย (เนื้อสามชั้น)', unit: 'กิโลกรัม' }, { name: 'ตับวัว (หมักแล้ว)', unit: 'กิโลกรัม' },
-        { name: 'ตับวัว (ที่ยังไม่ถูกหมักหรือยังไม่ถูกตัด)', unit: 'กิโลกรัม' },
-        { name: 'กระดูกวัว', unit: 'ชิ้น' }, { name: 'สันหลังวัว', unit: 'ชิ้น' }, { name: 'หมูสด (ที่หมักแล้ว)', unit: 'กิโลกรัม' },
-        { name: 'หมูสด (ที่ยังไม่หมักหรือยังไม่ถูกตัด)', unit: 'กิโลกรัม' }, { name: 'หมูเปื่อย (ขั้วตับหมู)', unit: 'กิโลกรัม' },
-        { name: 'ตับหมู (หมักแล้ว)', unit: 'กิโลกรัม' }, { name: 'เล้ง', unit: 'ชิ้น' },
-        { name: 'ขาตั้ง', unit: 'ชิ้น' }, { name: 'มันแข็ง', unit: 'กิโลกรัม' }
-      ],
-
-      'อาหารตามสั่ง': [
+      'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': [
+{ name:'ซีอิ๊วขาว',unit:'ชิ้น'},{ name:'ซอสหอย',unit:'ชิ้น'},{ name:'ฝาเขียว',unit:'ชิ้น'},
+{ name:'น้ำปลาเล็ก',unit:'ชิ้น'},{ name:'น้ำปลาใหญ่',unit:'ชิ้น'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ชิ้น'},
+{ name:'น้ำจิ้มไก่เล็ก',unit:'ชิ้น'},{ name:'แป้งทอดกรอบ',unit:'ชิ้น'},{ name:'หนังยาง',unit:'ชิ้น'},
+{ name:'ทรายขาว',unit:'ชิ้น'},{ name:'ม้าบิน',unit:'ชิ้น'},{ name:'น้ำมัน',unit:'ชิ้น'},
+{ name:'ชูรส',unit:'ชิ้น'},{ name:'กะปิ',unit:'ชิ้น'},{ name:'รสดีหมู',unit:'ชิ้น'},
+{ name:'นมสด',unit:'ชิ้น'},{ name:'น้ำยาล้างล้างจาน',unit:'ชิ้น'},{ name:'น้ำยาล้างห้องน้ำ',unit:'ชิ้น'},
+{ name:'น้ำยาถูพื้น',unit:'ชิ้น'},{ name:'สบู่ล้างมือ',unit:'ชิ้น'},{ name:'ผงซักฟอก',unit:'ชิ้น'},
+{ name:'ทิชชู',unit:'ชิ้น'},{ name:'หลอดสั้น',unit:'ชิ้น'},{ name:'หลอดยาว',unit:'ชิ้น'}
+],
+'อาหารตามสั่ง': [
         { name: 'ผักสด', unit: '' },
         { name: 'ใบโหระพา', unit: 'กิโลกรัม' },
         { name: 'ผักชีใบเลื่อย', unit: 'กิโลกรัม' },
@@ -760,7 +742,7 @@
   { name: 'กระดาษร้อน เครื่องปริ้น', unit: 'ม้วน' },
   { name: 'ไม้จิ้มฟัน', unit: 'กระปุก' },
   { name: 'ถุงดำหลังครัว', unit: 'แพ็ค' },
-  { name: 'ถุงดำหน้าเรือ', unit: 'แพ็ค' },
+  { name: 'ถุงดำแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส', unit: 'แพ็ค' },
   { name: 'น้ำยาล้างจาน', unit: 'แกนลอน' },
   { name: 'สก็อตไบร์ท (จาน)', unit: 'ชิ้น' },
   { name: 'สก็อตไบร์ท (แก้ว)', unit: 'ชิ้น' },
@@ -906,7 +888,7 @@ function getDisplayQty_(it){
     let sheetPollTimer = null;
 
     const defaultConfig = {
-      shop_name: 'ก๋วยเตี๋ยวเรือรสจนา',
+      shop_name: 'ส้มตำสี่แยกแซ่บนัว',
       primary_color: '#ea580c',
       secondary_color: '#ffffff',
       text_color: '#1f2937',
@@ -1219,8 +1201,8 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'หน้าเรือ': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
-      const icons = { 'หน้าเรือ': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1244,7 +1226,7 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'หน้าเรือ': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1364,8 +1346,7 @@ function getDisplayQty_(it){
           const raw = qtyEl ? qtyEl.value.trim() : "";
           const parsed = parseQuantity_(raw);
 
-          if (qtyEl && raw === "") missingEls.push(qtyEl);
-          else if (qtyEl && !parsed.ok) invalidEls.push(qtyEl);
+          if (qtyEl && raw !== '' && !parsed.ok) invalidEls.push(qtyEl);
 
           const unitSelectEl = Array.from(document.querySelectorAll('select[data-field="unit"]'))
             .find(el => el && el.dataset && el.dataset.item === item.name);
@@ -1389,12 +1370,7 @@ function getDisplayQty_(it){
           };
         }).filter(x => !x.__section);
 
-        if (missingEls.length) {
-          missingEls.forEach(el => el.classList.add("border-red-500"));
-          missingEls[0].scrollIntoView({ behavior: "smooth", block: "center" });
-          showToast("กรุณากรอกจำนวนให้ครบทุกช่อง (ใส่ 0 ได้ แต่ห้ามปล่อยว่าง)", "error");
-          return;
-        }
+        
 
         if (invalidEls.length) {
           invalidEls.forEach(el => el.classList.add("border-red-500"));
@@ -1596,8 +1572,8 @@ function renderHistory() {
 
   noHistory.classList.add('hidden');
 
-  const colors = { 'หน้าเรือ': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
-  const icons = { 'หน้าเรือ': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
 
   listEl.innerHTML = filtered.map(record => `
     <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
@@ -1634,7 +1610,7 @@ function showHistoryDetail(idOrBackendId) {
 
   const previousRecord = getPreviousRecord(record.category, record.date);
   const t = translations[currentLanguage];
-  const colors = { 'หน้าเรือ': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
 
   const content = document.getElementById('history-detail-content');
   content.innerHTML = `
@@ -1709,7 +1685,7 @@ y-400">-</span></td>`;
       </table>
     </div>
   `;
- 
+
   showPage('history-detail-page');
 }
 
