@@ -66,12 +66,12 @@
             </div>
           </button>
 
-          <button onclick="selectCategory('อาหารตามสั่ง')" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+          <button onclick="selectCategory('เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส')" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
             <div class="flex items-center gap-4">
               <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🍳</div>
               <div class="text-left">
-                <p id="cat-food" class="text-xl font-bold">อาหารตามสั่ง</p>
-                <p id="cat-food-desc" class="text-emerald-100 text-sm">เช็คสต็อกวัตถุดิบอาหารตามสั่ง</p>
+                <p id="cat-food" class="text-xl font-bold">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</p>
+                <p id="cat-food-desc" class="text-emerald-100 text-sm">เช็คสต็อกเจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</p>
               </div>
               <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -79,12 +79,12 @@
             </div>
           </button>
 
-          <button onclick="selectCategory('เด็กเสิร์ฟ')" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+          <button onclick="selectCategory('ของสด')" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
             <div class="flex items-center gap-4">
               <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🧑‍🍳</div>
               <div class="text-left">
-                <p id="cat-staff" class="text-xl font-bold">เด็กเสิร์ฟ</p>
-                <p id="cat-staff-desc" class="text-blue-100 text-sm">เช็คสต็อกอุปกรณ์เด็กเสิร์ฟ</p>
+                <p id="cat-staff" class="text-xl font-bold">ของสด</p>
+                <p id="cat-staff-desc" class="text-blue-100 text-sm">เช็คสต็อกอุปกรณ์ของสด</p>
               </div>
               <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -191,8 +191,8 @@
               <select id="filter-category" onchange="filterHistory()" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors">
                 <option value="" id="opt-all">ทั้งหมด</option>
                 <option value="แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</option>
-                <option value="อาหารตามสั่ง">อาหารตามสั่ง</option>
-                <option value="เด็กเสิร์ฟ">เด็กเสิร์ฟ</option>
+                <option value="เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</option>
+                <option value="ของสด">ของสด</option>
               </select>
             </div>
           </div>
@@ -241,10 +241,10 @@
         history: 'ประวัติ',
         boatFront: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
         boatFrontDesc: 'เช็คสต็อกวัตถุดิบแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
-        customFood: 'อาหารตามสั่ง',
-        customFoodDesc: 'เช็คสต็อกวัตถุดิบอาหารตามสั่ง',
-        staffChild: 'เด็กเสิร์ฟ',
-        staffChildDesc: 'เช็คสต็อกอุปกรณ์เด็กเสิร์ฟ',
+        customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
+        customFoodDesc: 'เช็คสต็อกเจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
+        staffChild: 'ของสด',
+        staffChildDesc: 'เช็คสต็อกของสด',
         backHome: 'กลับหน้าหลัก',
         staffName: 'ผู้เช็คสต็อก',
         enterName: 'กรุณากรอกชื่อผู้ทำการเช็คสต็อก',
@@ -327,10 +327,10 @@
         history: 'မှတ်တမ်း',
         boatFront: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
         boatFrontDesc: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
-        customFood: 'อาหารตามสั่ง',
-        customFoodDesc: 'อาหารตามสั่งရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
-        staffChild: 'เด็กเสิร์ฟ',
-        staffChildDesc: 'เด็กเสิร์ฟအသုံးအဆောင်များကိုစစ်ဆေးခြင်း',
+        customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
+        customFoodDesc: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
+        staffChild: 'ของสด',
+        staffChildDesc: 'ของสดအသုံးအဆောင်များကိုစစ်ဆေးခြင်း',
         backHome: 'ပင်မစာမျက်နှာသို့ပြန်မည်',
         staffName: 'စတော့စစ်သူ',
         enterName: 'စတော့စစ်သူအမည်ထည့်ပါ',
@@ -580,8 +580,8 @@
       if (currentLanguage === 'th') return thCat;
       const catKeyMap = {
         'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
-        'อาหารตามสั่ง': 'customFood',
-        'เด็กเสิร์ฟ': 'staffChild'
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'customFood',
+        'ของสด': 'staffChild'
       };
       const k = catKeyMap[thCat];
       return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
@@ -598,104 +598,56 @@
 { name:'น้ำยาถูพื้น',unit:'ชิ้น'},{ name:'สบู่ล้างมือ',unit:'ชิ้น'},{ name:'ผงซักฟอก',unit:'ชิ้น'},
 { name:'ทิชชู',unit:'ชิ้น'},{ name:'หลอดสั้น',unit:'ชิ้น'},{ name:'หลอดยาว',unit:'ชิ้น'}
 ],
-'อาหารตามสั่ง': [
-        { name: 'ผักสด', unit: '' },
-        { name: 'ใบโหระพา', unit: 'กิโลกรัม' },
-        { name: 'ผักชีใบเลื่อย', unit: 'กิโลกรัม' },
-        { name: 'ผักบุ้ง (ยังไม่ตัด)', unit: 'กิโลกรัม' },
-        { name: 'ใบเตย', unit: 'กิโลกรัม' },
-        { name: 'ตะไคร้', unit: 'กิโลกรัม' },
-        { name: 'ผักชี', unit: 'กิโลกรัม' },
-        { name: 'รากผักชี', unit: 'กิโลกรัม' },
-        { name: 'กระเทียมไทย', unit: 'กิโลกรัม' },
-        { name: 'กระเทียมจีน', unit: 'กิโลกรัม' },
-        { name: 'ใบกะเพรา', unit: 'กิโลกรัม' },
-        { name: 'คะน้าเล็ก', unit: 'กิโลกรัม' },
-        { name: 'ถั่วฝักยาว', unit: 'กิโลกรัม' },
-        { name: 'มะม่วงดิบ', unit: 'กิโลกรัม' },
-        { name: 'ต้นหอม', unit: 'กิโลกรัม' },
-        { name: 'ชะอม', unit: 'กิโลกรัม' },
-        { name: 'แครอท', unit: 'กิโลกรัม' },
-        { name: 'หัวหอมใหญ่', unit: 'กิโลกรัม' },
-        { name: 'มะเขือเทศ', unit: 'กิโลกรัม' },
-        { name: 'มะละกอ', unit: 'ลูก' },
-        { name: 'แตงกวา', unit: 'กิโลกรัม/กรัม' },
-        { name: 'มะนาว', unit: 'กิโลกรัม' },
-        { name: 'พริกหยวก', unit: 'กิโลกรัม' },
-        { name: 'พริกชี้แดง', unit: 'กิโลกรัม' },
-        { name: 'พริกแดง', unit: 'กิโลกรัม' },
-        { name: 'พริกเขียว', unit: 'กิโลกรัม' },
-        { name: 'พริกขี้หนู', unit: 'กิโลกรัม' },
-        { name: 'พริกแห้ง', unit: 'กิโลกรัม' },
-        { name: 'ขิง', unit: 'กิโลกรัม/กรัม' },
-        { name: 'กระชาย', unit: 'กิโลกรัม' },
-        { name: 'มัน', unit: 'ลูก' },
-        { name: 'ใบมะกรูด', unit: 'กิโลกรัม' },
-        { name: 'เม็ดพริกไทยพวง', unit: 'กิโลกรัม' },
-        { name: 'หัวไชเท้า', unit: 'กิโลกรัม' },
-        { name: 'ลูกผักชี', unit: 'ถุง' },
-        { name: 'ผักกาดดอง', unit: 'กิโลกรัม' },
+'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': [
+{name:'กล่องล็อก',unit:'ชิ้น'},
+{name:'ถ้วย 45',unit:'ชิ้น'},
+{name:'กล่อง1000ml',unit:'ชิ้น'},
+{name:'ถ้วย 1 ออนซ์',unit:'ชิ้น'},
+{name:'ถ้วย 2 ออนซ์',unit:'ชิ้น'},
+{name:'แอลกอฮอล์จุดไฟ',unit:'ชิ้น'},
+{name:'สมุดฉีก',unit:'ชิ้น'},
+{name:'ช้อนพลาสติก',unit:'ชิ้น'},
+{name:'ส้อมพลาสติก',unit:'ชิ้น'},
+{name:'ไม้เสียบปลาดุก',unit:'ชิ้น'},
+{name:'ถุงเย็น ใส่ไก่',unit:'ชิ้น'},
+{name:'12 × 20',unit:'ชิ้น'},
+{name:'4 × 6',unit:'ชิ้น'},
+{name:'5 × 8',unit:'ชิ้น'},
+{name:'6 × 9',unit:'ชิ้น'},
+{name:'7 × 11',unit:'ชิ้น'},
+{name:'6 × 14',unit:'ชิ้น'},
+{name:'7 × 15',unit:'ชิ้น'},
+{name:'8 × 16',unit:'ชิ้น'},
+{name:'9 × 18',unit:'ชิ้น'},
+{name:'มาม่า',unit:'ชิ้น'},
+{name:'รสดีเนื้อ',unit:'ชิ้น'},
+{name:'พริกไทยเม็ด',unit:'ชิ้น'},
+{name:'กระเทียมเจียว',unit:'ชิ้น'},
+{name:'น้ำตาลปี๊บหนึ่งโล',unit:'ชิ้น'},
+{name:'น้ำตาลปี๊บครึ่งโล',unit:'ชิ้น'},
+{name:'น้ำมะนาว',unit:'ชิ้น'},
+{name:'น้ำกระเทียมดอง',unit:'ชิ้น'},
+{name:'สิริพร',unit:'ชิ้น'},
+{name:'ถั่วลิสง',unit:'ชิ้น'},
+{name:'เกลือห่อเล็ก',unit:'ชิ้น'},
+{name:'เกลือห่อใหญ่',unit:'ชิ้น'},
+{name:'นมคาเนชั่น',unit:'ชิ้น'},
+{name:'ข้าวหอมมะลิ',unit:'ชิ้น'},
+{name:'ข้าวสาร',unit:'ชิ้น'}
+],
 
-        { name: 'เครื่องปรุง', unit: '' },
-        { name: 'นมจืด', unit: 'ขวด' },
-        { name: 'เนยจืด (ก้อน)', unit: 'ก้อน' },
-        { name: 'เนยเค็ม (กระปุก)', unit: 'กระปุก' },
-        { name: 'กะทิ', unit: 'ขวด' },
-        { name: 'น้ำตาลปี๊บ', unit: 'ก้อน' },
-        { name: 'แป้งมันสัมปะหลัง', unit: 'ถุง' },
-        { name: 'ผงหมักเนื้อสัตว์', unit: 'ซอง' },
-        { name: 'น้ำตาลทรายขาว', unit: 'ถุง' },
-        { name: 'น้ำตาลทรายแดง (ห่อสีม่วง)', unit: 'ถุง' },
-        { name: 'เกลือ', unit: 'ถุง' },
-        { name: 'ดอกเกลือ', unit: 'ถุง' },
-        { name: 'ซีอิ๊วขาว', unit: 'แกนลอน' },
-        { name: 'ซอสฝาเขียว (ขวด)', unit: 'ขวด' },
-        { name: 'ซอสน้ำมันหอย', unit: 'แกนลอน' },
-        { name: 'น้ำส้มสายชู', unit: 'แกนลอน' },
-        { name: 'น้ำปลาทิพรส(แกนลอน)', unit: 'แกนลอน' },
-        { name: 'พริกแกง', unit: 'ถุง' },
-        { name: 'เหล้าจีน', unit: 'ขวด' },
-        { name: 'น้ำมันงา', unit: 'ขวด' },
-        { name: 'น้ำมันพืช', unit: 'ขวด' },
-        { name: 'ผงชูรส', unit: 'ถุง' },
-        { name: 'รสดีไก่', unit: 'ถุง' },
-        { name: 'รสดีหมู', unit: 'ถุง' },
-        { name: 'ซีอิ๊วหวานดำ', unit: 'ขวด' },
-        { name: 'น้ำจิ้มลูกชิ้น', unit: 'ถุง' },
+'ของสด': [
+{ name: 'สันคอบด', unit: 'กรัม/กิโลกรัม' }, { name: 'สันคอ', unit: 'กรัม/กิโลกรัม' },
+{ name: 'โครงแก้ว', unit: 'กรัม/กิโลกรัม' }, { name: 'เล้ง', unit: 'กรัม/กิโลกรัม' },
+{ name: 'ไส้อ่อน', unit: 'กรัม/กิโลกรัม' }, { name: 'ตับหมู', unit: 'กรัม/กิโลกรัม' },
+{ name: 'หมูสามชั้น', unit: 'กรัม/กิโลกรัม' }, { name: 'คอย่าง', unit: 'กรัม/กิโลกรัม' },
+{ name: 'หนังหมู', unit: 'กรัม/กิโลกรัม' }, { name: 'ลิ้นหมู', unit: 'กรัม/กิโลกรัม' },
+{ name: 'กุ้งสด', unit: 'กรัม/กิโลกรัม' }, { name: 'ปลาหมึก', unit: 'กรัม/กิโลกรัม' },
+{ name: 'หอยแครง', unit: 'กรัม/กิโลกรัม' }
 
-        { name: 'เนื้อสัตว์', unit: '' },
-        { name: 'ซี่โครงไก่', unit: 'ตัว' },
-        { name: 'อกไก่', unit: 'กิโลกรัม/กรัม' },
-        { name: 'ไก่ตัว', unit: 'ตัว' },
-        { name: 'สันในไก่', unit: 'กิโลกรัม' },
-        { name: 'ปีกไก่', unit: 'กิโลกรัม' },
-        { name: 'ปลาหมึก', unit: 'กิโลกรัม/กรัม' },
-        { name: 'กุ้ง', unit: 'กิโลกรัม/กรัม' },
-        { name: 'มันแข็ง', unit: 'กิโลกรัม' },
-        { name: 'ขาหมู', unit: 'กิโลกรัม' },
-        { name: 'ไข่ไก่', unit: 'ฟอง' },
-        { name: 'ไข่เป็ด', unit: 'ฟอง' },
-        { name: 'ไข่เยี่ยวม้า', unit: 'ฟอง' },
-
-        { name: 'ข้าว', unit: '' },
-        { name: 'ข้าวตราสามงู', unit: 'ถุง' },
-        { name: 'ข้าวตรามังกร', unit: 'ถุง' },
-        { name: 'ข้าวสารทำข้าวผัด', unit: 'ถุง' },
-        { name: 'ข้าวเหนียว', unit: 'ถุง' },
-        { name: 'สปาเก็ตตี้', unit: 'กิโลกรัม/กรัม' }
-      ],
-
-'เด็กเสิร์ฟ': [
-  { name: 'น้ำเปล่า', unit: 'ขวด/แพ็ค' }, { name: 'น้ำโค้ก', unit: 'ขวด/ลัง' },
-  { name: 'น้ำแดง', unit: 'ขวด/ลัง' }, { name: 'น้ำเขียว', unit: 'ขวด/ลัง' }, { name: 'น้ำส้ม', unit: 'ขวด/ลัง' },
-  { name: 'น้ำสไปร์ท Sprite', unit: 'ขวด/ลัง' }, { name: 'โค้กซีโร่', unit: 'ขวด/แพ็ค' }, { name: 'น้ำเก๊กฮวย', unit: 'ถุง' },
-  { name: 'น้ำบ๊วย', unit: 'ถุง' }, { name: 'น้ำกระเจี๊ยบ', unit: 'ถุง' }, { name: 'โอเลี้ยง', unit: 'ถุง' },
-  { name: 'น้ำชาเขียว', unit: 'ถุง' }, { name: 'น้ำชาไทย', unit: 'ถุง' }, { name: 'น้ำชามะนาว', unit: 'ถุง' },
-  { name: 'น้ำลำไย', unit: 'ถุง' },
-
-  { name: 'ของหวาน และ เครื่องเคียง', unit: '' },
-  { name: 'ไอติมขนมปัง ช็อกโกแลต', unit: 'ไม้' }, { name: 'ไอติมกรวยคอตตอนแคนดี้', unit: 'โคน'  },
-  {name: 'ไอติมถ้วย ช็อกโกแลต', unit: 'ถ้วย' }, { name: 'ไอติมถ้วย วานิลา', unit: 'ถ้วย' },
+  { name: 'รายการเดือนละครั้ง', unit: '' },
+  { name: 'ถุงดำ', unit: 'แพค' }, { name: 'กระดาษไลน์แมน', unit: 'ม้วน'  },
+  {name: 'กระดาษเครื่องปริ้น', unit: 'ม้วน' }, { name: 'ไอติมถ้วย วานิลา', unit: 'ถ้วย' },
   {name: 'ไอติมถ้วย กะทิ', unit: 'ถ้วย' }, { name: 'ไอติมถ้วย มะนาว', unit: 'ถ้วย' },
   { name: 'ไอติมถั่วดำ', unit: 'ไม้' }, { name: 'ไอติมเผือก', unit: 'ไม้' }, { name: 'ไอติมทุเรียน', unit: 'ไม้' },
   { name: 'ไอติมข้าวโพด', unit: 'ไม้' },
@@ -1201,8 +1153,8 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
-      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳' };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1226,7 +1178,7 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'อาหารตามสั่ง': 'bg-emerald-500', 'เด็กเสิร์ฟ': 'bg-blue-500' };
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'ของสด': 'bg-blue-500' };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1572,8 +1524,8 @@ function renderHistory() {
 
   noHistory.classList.add('hidden');
 
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
-  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'อาหารตามสั่ง': '🍳', 'เด็กเสิร์ฟ': '🧑‍🍳' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'ของสด': '🧑‍🍳' };
 
   listEl.innerHTML = filtered.map(record => `
     <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
@@ -1610,7 +1562,7 @@ function showHistoryDetail(idOrBackendId) {
 
   const previousRecord = getPreviousRecord(record.category, record.date);
   const t = translations[currentLanguage];
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'อาหารตามสั่ง': 'from-emerald-500 to-emerald-600', 'เด็กเสิร์ฟ': 'from-blue-500 to-blue-600' };
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'ของสด': 'from-blue-500 to-blue-600' };
 
   const content = document.getElementById('history-detail-content');
   content.innerHTML = `
