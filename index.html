@@ -31,6 +31,7 @@
 
 <body class="h-full bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
   <div id="app" class="h-full w-full overflow-auto">
+    <!-- หน้าหลัก -->
     <div id="home-page" class="min-h-full p-4 md:p-6 pt-20">
       <div class="max-w-lg mx-auto">
         <div class="flex items-center justify-between mb-8">
@@ -126,10 +127,11 @@
               </svg>
             </div>
           </button>
-        </div>
+</div>
       </div>
     </div>
 
+    <!-- หน้ากรอกชื่อ -->
     <div id="name-page" class="min-h-full p-4 md:p-6 hidden">
       <div class="max-w-lg mx-auto fade-in">
         <button onclick="goHome()" class="flex items-center gap-2 text-orange-700 mb-6 hover:text-orange-800 transition-colors">
@@ -154,6 +156,7 @@
       </div>
     </div>
 
+    <!-- หน้าเช็คสต็อก -->
     <div id="stock-page" class="min-h-full p-4 md:p-6 hidden">
       <div class="max-w-2xl mx-auto fade-in">
         <div class="flex items-center justify-between mb-6">
@@ -177,7 +180,6 @@
               <thead class="bg-gray-50">
                 <tr>
                   <th id="txt-item" class="px-4 py-3 text-left text-sm font-semibold text-gray-700">รายการ</th>
-                  <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700 w-28">จำนวนที่ควรมี</th>
                   <th id="txt-quantity" class="px-4 py-3 text-center text-sm font-semibold text-gray-700 w-28">จำนวน</th>
                   <th id="txt-unit" class="px-4 py-3 text-center text-sm font-semibold text-gray-700 w-20">หน่วย</th>
                   <th id="txt-note" class="px-4 py-3 text-left text-sm font-semibold text-gray-700">หมายเหตุ</th>
@@ -202,6 +204,7 @@
       </div>
     </div>
 
+    <!-- หน้าประวัติ -->
     <div id="history-page" class="min-h-full p-4 md:p-6 hidden">
       <div class="max-w-2xl mx-auto fade-in">
         <button onclick="goHome()" class="flex items-center gap-2 text-orange-700 mb-6 hover:text-orange-800 transition-colors">
@@ -242,6 +245,7 @@
       </div>
     </div>
 
+    <!-- หน้ารายละเอียดประวัติ -->
     <div id="history-detail-page" class="min-h-full p-4 md:p-6 hidden">
       <div class="max-w-2xl mx-auto fade-in">
         <button onclick="showHistory()" class="flex items-center gap-2 text-orange-700 mb-6 hover:text-orange-800 transition-colors">
@@ -254,6 +258,7 @@
       </div>
     </div>
 
+    <!-- Toast notification -->
     <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg hidden transition-all duration-300 flex items-center gap-2">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -311,120 +316,1354 @@
         changePctLabel: 'เทียบเป็น %',
         noPrevious: 'ไม่มีรอบก่อนหน้า',
         invalidQty: 'รูปแบบจำนวนไม่ถูกต้อง (ตัวอย่าง: 10, 10.5, -2, 1/2)'
+      },
+      lo: {
+        stockCheck: 'ລະບົບກວດສອບສະຕ໋ອກ',
+        dailyCheck: 'ກວດສອບສະຕ໋ອກປະຈໍາວັນ',
+        history: 'ປະຫວັດ',
+        boatFront: 'ໜ້າເຮືອ',
+        boatFrontDesc: 'ກວດສອບວັດຖຸດິບໜ້າເຮືອ',
+        customFood: 'ອາຫານຕາມສັ່ງ',
+        customFoodDesc: 'ກວດສອບວັດຖຸດິບອາຫານຕາມສັ່ງ',
+        staffChild: 'ເດັກເສີບ',
+        staffChildDesc: 'ກວດສອບອຸປະກອນເດັກເສີບ',
+        backHome: 'ກັບໜ້າຫຼັກ',
+        staffName: 'ຜູ້ເຊັກສະຕ໋ອກ',
+        enterName: 'ກະລຸນາໃສ່ຊື່ຜູ້ເຊັກສະຕ໋ອກ',
+        fullName: 'ຊື່-ນາມສະກຸນ',
+        startChecking: 'ເລີ່ມເຊັກສະຕ໋ອກ',
+        item: 'ລາຍການ',
+        quantity: 'ຈໍານວນ',
+        unit: 'ໜ່ວຍ',
+        note: 'ໝາຍເຫດ',
+        save: 'ບັນທຶກຂໍ້ມູນ',
+        historyTitle: 'ປະຫວັດການເຊັກສະຕ໋ອກ',
+        selectDate: 'ເລືອກວັນທີ',
+        category: 'ໝວດໝູ່',
+        all: 'ທັງໝົດ',
+        staffChecker: 'ຜູ້ເຊັກສະຕ໋ອກ:',
+        date: 'ວັນທີ:',
+        noHistory: 'ບໍ່ພົບປະຫວັດການເຊັກສະຕ໋ອກ',
+        saved: 'ບັນທຶກຂໍ້ມູນສໍາເລັດ!',
+        error: 'ເກີດຂໍ້ຜິດພາດ ກະລຸນາລອງໃໝ່',
+        fullLimit: 'ບໍ່ສາມາດບັນທຶກໄດ້ ຂໍ້ມູນເຕັມແລ້ວ (ສູງສຸດ 999 ລາຍການ)',
+        enterName2: 'ກະລຸນາໃສ່ຊື່',
+        date2: 'ວັນທີ',
+        back: 'ກັບ',
+        backHistory: 'ກັບໜ້າປະຫວັດ',
+        compared: 'ທຽບກັບ',
+        increased: 'ເພີ່ມຂຶ້ນ',
+        decreased: 'ຫຼຸດລົງ',
+        noChange: 'ບໍ່ປ່ຽນແປງ',
+        changeLabel: 'ປ່ຽນແປງ',
+        changePctLabel: '%',
+        noPrevious: 'ບໍ່ມີຮອບກ່ອນໜ້າ',
+        invalidQty: 'ຮູບແບບຈໍານວນບໍ່ຖືກຕ້ອງ'
+      },
+      my: {
+        stockCheck: 'စတော့စစ်ဆေးမှုစနစ်',
+        dailyCheck: 'နေ့စဉ်စတော့စစ်ခြင်း',
+        history: 'မှတ်တမ်း',
+        boatFront: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
+        boatFrontDesc: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
+        customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
+        customFoodDesc: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
+        staffChild: 'เด็กเสิร์ฟ',
+        staffChildDesc: 'เด็กเสิร์ฟအသုံးအဆောင်များကိုစစ်ဆေးခြင်း',
+        backHome: 'ပင်မစာမျက်နှာသို့ပြန်မည်',
+        staffName: 'စတော့စစ်သူ',
+        enterName: 'စတော့စစ်သူအမည်ထည့်ပါ',
+        fullName: 'အမည်-နာမည်',
+        startChecking: 'စတော့စစ်ခြင်းစတင်မည်',
+        item: 'လာကိုင်',
+        quantity: 'ကျိုင်နွယ်',
+        unit: 'နွယ်',
+        note: 'မိုင်းဟင်',
+        save: 'အချက်အလက်သိမ်းမည်',
+        historyTitle: 'စတော့စစ်ဆေးမှုမှတ်တမ်း',
+        selectDate: 'ရက်စွဲရွေးပါ',
+        category: 'အမျိုးအစား',
+        all: 'အားလုံး',
+        staffChecker: 'စတော့စစ်သူ:',
+        date: 'ရက်စွဲ:',
+        noHistory: 'စတော့စစ်ဆေးမှုမှတ်တမ်းမရှိပါ',
+        saved: 'အချက်အလက်သိမ်းပြီးပါပြီ!',
+        error: 'အမှားဖြစ်ပွားပါသည် ထပ်စမ်းပါ',
+        fullLimit: 'သိမ်း၍မရပါ၊ အချက်အလက်ပြည့်နေပါပြီ (အများဆုံး 999 รายการ)',
+        enterName2: 'အမည်ထည့်ပါ',
+        date2: 'ရက်စွဲ',
+        back: 'နောက်သို့',
+        backHistory: 'မှတ်တမ်းသို့ပြန်မည်',
+        compared: 'နှိုင်းယှဉ်မှု',
+        increased: 'တိုးလာသည်',
+        decreased: 'လျော့သွားသည်',
+        noChange: 'မပြောင်းလဲပါ',
+        changeLabel: 'ပြောင်းလဲမှု',
+        changePctLabel: '%',
+        noPrevious: 'အရင်အချက်အလက်မရှိပါ',
+        invalidQty: 'ပမာဏပုံစံမမှန်ပါ'
       }
     };
 
-    function tItem(thName) { return thName; }
-    function tUnit(thUnit) { return thUnit; }
-    function tCategory(thCat) { return thCat; }
+    const ITEM_I18N = {
+      lo: {},
+      my: {
+        "ผักสด": "ဖာစုံ",
+        "ใบโหระพา": "ဝါလာဖာ",
+        "ผักชีใบเลื่อย": "နံနံပင်",
+        "ผักบุ้ง (ยังไม่ตัด)": "ဖာပု",
+        "ใบเตย": "ဘာတဲ",
+        "ตะไคร้": "တခိုင်း",
+        "ผักชี": "ဖာချီ",
+        "รากผักชี": "နံပင်မြစ်",
+        "กระเทียมไทย": "ကထီရိုင်",
+        "กระเทียมจีน": "ကထီရိုင်လစ်",
+        "ใบกะเพรา": "ကဖောင်",
+        "คะน้าเล็ก": "ခနါးလစ်",
+        "ถั่วฝักยาว": "ပဲသီး",
+        "มะม่วงดิบ": "သရက်သီး",
+        "ต้นหอม": "တွန့်ဟော်",
+        "แครอท": "လာဉနီ",
+        "หัวหอมใหญ่": "ဟော်ရိုင်",
+        "มะเขือเทศ": "ခရမ်းချည်သီး",
+        "มะละกอ": "သဘော်သီး",
+        "แตงกวา": "သခွာသီး",
+        "มะนาว": "သံပုရာသီး",
+        "พริกหยวก": "ဖိရွာ",
+        "พริกชี้แดง": "ဖိစိတဲ",
+        "พริกแดง": "ဖိတဲ",
+        "พริกเขียว": "ခီယို",
+        "พริกขี้หนู": "ခိနို",
+        "พริกแห้ง": "ငရုတ်ခြောက်",
+        "ขิง": "ဂျင်း",
+        "กระชาย": "ကာချိုင်",
+        "มัน": "မာ",
+        "ใบมะกรูด": "မာကို",
+        "เม็ดพริกไทยพวง": "ဖီထိုင်",
+        "หัวไชเท้า": "မေှာ်လာဉ",
+        "ลูกผักชี": "လွတ်ဖာချီ",
+        "ผักกาดดอง": "ဖာခိုင်တော်",
+
+        "เครื่องปรุง": "ခင်ယားပို",
+        "นมจืด": "နိုကြည်",
+        "เนยจืด (ก้อน)": "အရသာမစိ",
+        "เนยเค็ม (กระปุก)": "နိုင်ခင်",
+        "กะทิ": "ကထီး",
+        "น้ำตาลปี๊บ": "ပိ",
+        "แป้งมันสัปปะหลัง": "ပဲမာ",
+        "ผงหมักเนื้อสัตว์": "ဖိုမာနီယား",
+        "น้ำตาลทรายขาว": "သကြားဖြူ",
+        "น้ำตาลทรายแดง (ห่อสีม่วง)": "သကြားနီ",
+        "เกลือ": "ဆား",
+        "ดอกเกลือ": "ပန်းဆား",
+        "ซีอิ๊วขาว": "ဦးခေါင်",
+        "ซอสฝาเขียว": "ဖာခင်",
+        "ซอสน้ำมันหอย": "နားမာဟုတ်",
+        "น้ำส้มสายชู": "ဆာချို",
+        "น้ำปลาทิพรส": "ငံပျာရည်သေး",
+        "พริกแกง": "ဖီကယ်",
+        "เหล้าจีน": "အရက်",
+        "น้ำมันงา": "နားမာငံ",
+        "น้ำมันพืช": "ဆီ",
+        "ผงชูรส": "အချိုမှုန့်",
+        "รสดีไก่": "ခနောကြက်",
+        "รสดีหมู": "ခနောဝက်",
+        "ซีอิ๊วหวานดำ": "ဆီဦးဝါ",
+        "น้ำจิ้มลูกชิ้น": "နားမကြည့်",
+
+        "เนื้อสัตว์": "မဲသားသေး",
+        "ซี่โครงไก่": "ဆီးခိုကိုင်",
+        "อกไก่": "အိုကိုင်",
+        "ไก่ตัว": "ကြက်",
+        "สันในไก่": "ကြက်သဲမြစ်",
+        "ปีกไก่": "ပီကိုင်",
+        "ปลาหมึก": "ကင်းမွန်",
+        "กุ้ง": "ပုဇွန်",
+        "มันแข็ง": "မာခဲ",
+        "ขาหมู": "ခါမူ",
+        "ไข่ไก่": "ကြက်ဉ",
+        "ไข่เป็ด": "ဘဲဉ",
+        "ไข่เยี่ยวม้า": "ခိုင်ယုတ်မား",
+
+        "ข้าว": "ခေါက်",
+        "ข้าวตราสามงู": "တိုင်ဆာငူ",
+        "ข้าวตรามังกร": "တိုင်မကော်",
+        "ข้าวสารทำข้าวผัด": "ခေါက်ဖာ",
+        "ข้าวเหนียว": "ကောက်ညှင်း",
+        "สปาเก็ตตี้": "စပါကိတ်တိ"
+      }
+    };
+
+    const UNIT_I18N = {
+      lo: {
+        "": "",
+        "ห่อ": "ຫໍ່",
+        "ก้อน": "ກ້ອນ",
+        "กิโลกรัม": "ກິໂລກຣາມ",
+        "กิโลกรัม/กรัม": "ກິໂລ/ກຣາມ",
+        "ขวด": "ຂວດ",
+        "ขวด/แพ็ค": "ຂວດ/ແພັກ",
+        "ขวด/ลัง": "ຂວດ/ລັງ",
+        "ถุง": "ຖົງ",
+        "ซอง": "ຊອງ",
+        "กล่อง": "ກ່ອງ",
+        "กระป๋อง": "ກະປ໋ອງ",
+        "กระปุก": "ກະປຸກ",
+        "ชิ้น": "ຊິ້ນ",
+        "คู่": "ຄູ່",
+        "ตัว": "ຕົວ",
+        "ถัง": "ຖັງ",
+        "ถ้วย": "ຖ້ວຍ",
+        "ฟอง": "ຟອງ",
+        "ม้วน": "ມ້ວນ",
+        "ลูก": "ລູກ",
+        "แพ็ค": "ແພັກ",
+        "แถว": "ແຖວ",
+        "โหล": "ໂຫຼ",
+        "ไม้": "ໄມ້",
+        "แกนลอน": "ແກນລອນ",
+        "กรัม": "ກຣາມ"
+      },
+      my: {
+        "": "",
+        "ถุง": "အိတ်",
+        "กิโลกรัม": "ကီလိုကလာ",
+        "กรัม": "ကလာ",
+        "ฟอง": "ဖော်",
+        "ขวด": "ခိုဝါ",
+        "แกนลอน": "ကဲလော်",
+        "ซอง": "ဇော်",
+        "ก้อน": "ကော့",
+        "ลูก": "လွတ်",
+        "ห่อ": "ထုပ်",
+        "กิโลกรัม/กรัม": "ကီလိုကလာ/ကလာ",
+        "ขวด/แพ็ค": "ခိုဝါ/ပက်",
+        "ขวด/ลัง": "ခိုဝါ/လှောင်",
+        "กล่อง": "သေတ္တာ",
+        "กระป๋อง": "တင်း",
+        "กระปุก": "ဘူး",
+        "ชิ้น": "ခု",
+        "คู่": "စုံ",
+        "ตัว": "လုံး",
+        "ถัง": "ပုံး",
+        "ถ้วย": "ခွက်",
+        "ม้วน": "လိပ်",
+        "แพ็ค": "ပက်",
+        "แถว": "တန်း",
+        "โหล": "တစ်ဒါဇင်",
+        "ไม้": "ချောင်း"
+      }
+    };
+
+    const TH_TO_LAO_CHAR = {
+      "ก":"ກ","ข":"ຂ","ค":"ຄ","ฆ":"ຄ","ง":"ງ",
+      "จ":"ຈ","ฉ":"ຊ","ช":"ຊ","ซ":"ຊ","ฌ":"ຊ","ญ":"ຍ",
+      "ฎ":"ດ","ฏ":"ຕ","ฐ":"ທ","ฑ":"ທ","ฒ":"ທ","ณ":"ນ",
+      "ด":"ດ","ต":"ຕ","ถ":"ຖ","ท":"ທ","ธ":"ທ","น":"ນ",
+      "บ":"ບ","ป":"ປ","ผ":"ຜ","ฝ":"ຝ","พ":"ພ","ฟ":"ຟ","ภ":"ພ","ม":"ມ",
+      "ย":"ຢ","ร":"ຣ","ล":"ລ","ว":"ວ",
+      "ศ":"ສ","ษ":"ສ","ส":"ສ","ห":"ຫ","ฬ":"ລ","อ":"ອ","ฮ":"ຮ",
+      "ะ":"ະ","า":"າ","ำ":"ຳ","ิ":"ິ","ี":"ີ","ึ":"ຶ","ื":"ື","ุ":"ຸ","ู":"ູ",
+      "เ":"ເ","แ":"ແ","โ":"ໂ","ใ":"ໄ","ไ":"ໄ","ๆ":"ໆ"
+    };
+
+    const TH_TO_MY_CHAR = {
+      "ก":"က","ข":"ခ","ค":"ခ","ฆ":"ခ","ง":"င",
+      "จ":"စ","ฉ":"ဆ","ช":"ဆ","ซ":"ဆ","ฌ":"ဆ","ญ":"ည",
+      "ฎ":"ဒ","ฏ":"တ","ฐ":"ထ","ฑ":"ထ","ฒ":"ထ","ณ":"န",
+      "ด":"ဒ","ต":"တ","ถ":"ထ","ท":"ထ","ธ":"ထ","น":"န",
+      "บ":"ဘ","ป":"ပ","ผ":"ဖ","ฝ":"ဖ","พ":"ဖ","ฟ":"ဖ","ภ":"ဖ","ม":"မ",
+      "ย":"ယ","ร":"ရ","ล":"လ","ว":"ဝ",
+      "ศ":"သ","ษ":"သ","ส":"သ","ห":"ဟ","ฬ":"လ","อ":"အ","ฮ":"ဟ",
+      "ะ":"", "า":"ာ","ำ":"ံ","ิ":"ိ","ี":"ီ","ึ":"ု","ื":"ူ","ุ":"ု","ู":"ူ",
+      "เ":"ေ","แ":"ဲ","โ":"ို","ใ":"ို","ไ":"ို"
+    };
+
+    const TH_DROP = new Set(["่","้","๊","๋","็","์","ํ","์","ๆ"]);
+
+    function translitThai_(s, table){
+      if (!s) return s;
+      let out = "";
+      for (const ch of s){
+        if (TH_DROP.has(ch)) continue;
+        out += (table[ch] !== undefined) ? table[ch] : ch;
+      }
+      return out;
+    }
+
+    function translitThaiToLao(s){ return translitThai_(s, TH_TO_LAO_CHAR); }
+    function translitThaiToMyanmar(s){ return translitThai_(s, TH_TO_MY_CHAR); }
+
+    function markDirty_(){}
+    function validateForm_(){}
+
+    function tItem(thName) {
+      if (currentLanguage === 'th') return thName;
+      const map = ITEM_I18N[currentLanguage];
+      if (map && map[thName]) return map[thName];
+      if (currentLanguage === 'lo') return translitThaiToLao(thName);
+      if (currentLanguage === 'my') return translitThaiToMyanmar(thName);
+      return thName;
+    }
+
+    function tUnit(thUnit) {
+      if (currentLanguage === 'th') return thUnit;
+      const map = UNIT_I18N[currentLanguage];
+      if (map && map[thUnit]) return map[thUnit];
+      if (currentLanguage === 'lo') return translitThaiToLao(thUnit);
+      if (currentLanguage === 'my') return translitThaiToMyanmar(thUnit);
+      return thUnit;
+    }
+
+    function tCategory(thCat) {
+      if (currentLanguage === 'th') return thCat;
+      const catKeyMap = {
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'customFood',
+        'พี่หยี เช็คทุกวัน': 'staffChild',
+        'ผักสด': 'staffChild'
+      };
+      const k = catKeyMap[thCat];
+      return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
+    }
 
     const stockItems = {
       'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': [
-        { name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ขวด'},{ name:'ฝาเขียว',unit:'ขวด'},
-        { name:'น้ำปลาเล็ก',unit:'ขวด'},{ name:'น้ำปลาใหญ่',unit:'ขวด'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ถุง'},
-        { name:'น้ำจิ้มไก่เล็ก',unit:'แพค'},{ name:'แป้งทอดกรอบ',unit:'ถุง'},{ name:'หนังยาง',unit:'ถุง'},
-        { name:'ทรายขาว',unit:'ถุง'},{ name:'ม้าบิน',unit:'ถุง'},{ name:'น้ำมัน',unit:'ถุง'},
-        { name:'ชูรส',unit:'ถุง'},{ name:'กะปิ',unit:'กระปุก'},{ name:'รสดีหมู',unit:'ถุง'},
-        { name:'นมสด',unit:'กระป๋อง'},{ name:'น้ำยาล้างล้างจาน',unit:'แกลลอน'},{ name:'น้ำยาล้างห้องน้ำ',unit:'แกลลอน'},
-        { name:'น้ำยาถูพื้น',unit:'แกลลอน'},{ name:'สบู่ล้างมือ',unit:'แกลลอน'},{ name:'ผงซักฟอก',unit:'ถุง'},
-        { name:'ทิชชู',unit:'แพค'},{ name:'หลอดสั้น',unit:'แพค'},{ name:'หลอดยาว',unit:'แพค'} ,
-        { name:'น้ำมะนาวขวด',unit:'ขวด'} , { name:'แอลกอฮอลล์',unit:'ถุง'} , { name:'กระเทียมเจียว',unit:'ถุง'}
-      ],
-      'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': [
-        {name:'กล่องล็อก',unit:'แพค'}, {name:'ถ้วย 45',unit:'แพค'}, {name:'กล่อง1000ml',unit:'แพค'},
-        {name:'ถ้วย 1 ออนซ์',unit:'แพค'}, {name:'ถ้วย 2 ออนซ์',unit:'แพค'}, {name:'สมุดฉีก',unit:'แพค'},
-        {name:'ช้อนพลาสติก',unit:'แพค'}, {name:'ส้อมพลาสติก',unit:'แพค'}, {name:'ไม้เสียบปลาดุก',unit:'ห่อ'},
-        {name:'ถุงเย็น ใส่ไก่',unit:'ห่อ'}, {name:'12 × 20',unit:'ห่อ'}, {name:'4 × 6',unit:'ห่อ'},
-        {name:'5 × 8',unit:'ห่อ'}, {name:'6 × 9',unit:'ห่อ'}, {name:'7 × 11',unit:'ห่อ'},
-        {name:'6 × 14',unit:'ห่อ'}, {name:'7 × 15',unit:'ห่อ'}, {name:'8 × 16',unit:'ห่อ'},
-        {name:'9 × 18',unit:'ห่อ'}, {name:'มาม่า',unit:'ห่อ'}, {name:'รสดีเนื้อ',unit:'ห่อ'},
-        {name:'พริกไทยเม็ด',unit:'ห่อ'}, {name:'น้ำตาลปี๊บหนึ่งโล',unit:'ลัง'}, {name:'น้ำตาลปี๊บครึ่งโล',unit:'ลัง'},
-        {name:'น้ำกระเทียมดอง',unit:'ขวด'}, {name:'สิริพร',unit:'แพค'}, {name:'ถั่วลิสง',unit:'ถุง'},
-        {name:'เกลือห่อเล็ก',unit:'แพค'}, {name:'เกลือห่อใหญ่',unit:'ห่อ'}, {name:'ข้าวหอมมะลิ',unit:'กระติก'},
-        {name:'ข้าวสาร',unit:'ถัง'}
-      ],
-      'พี่หยี เช็คทุกวัน': [
-        { name: 'สันคอบด', unit: 'ถ้วย' }, { name: 'สันคอ', unit: 'ถ้วย' }, { name: 'โครงแก้ว', unit: 'ถุง' },
-        { name: 'เล้ง', unit: 'ถุง' }, { name: 'ไส้อ่อน', unit: 'ถ้วย' }, { name: 'ตับหมู', unit: 'ถุง' },
-        { name: 'หมูสามชั้น', unit: 'กิโลกรัม' }, { name: 'คอย่าง', unit: 'ถ้วย' }, { name: 'หนังหมู', unit: 'ถ้วย' },
-        { name: 'ลิ้นหมู', unit: 'ถ้วย' }, { name: 'กุ้งสด', unit: 'ถุง' }, { name: 'ปลาหมึก', unit: 'กระปุก' },
-        { name: 'หอยแครง', unit: 'กิโลกรัม' }, { name: 'รายการเดือนละครั้ง', unit: '' }, { name: 'ถุงดำ', unit: 'แพค' },
-        { name: 'กระดาษไลแมน', unit: 'แถว' }, {name: 'กระดาษเครื่องปริ้น', unit: 'กล่อง' },
-      ],
-      'ผักสด': [
-        {name:'ข่า',unit:'ถุง'}, {name:'ตะไคร้',unit:'ถุง'}, {name:'ใบมะกรูด',unit:'ถุง'},
-        {name:'กวางตุ้ง',unit:'ถุง'}, {name:'ชะพลู',unit:'ถุง'}, {name:'ชีลาว',unit:'ถุง'},
-        {name:'ใบแมงลัก',unit:'ถุง'}, {name:'สะระแหน่',unit:'ถุง'}, {name:'พริกลาว',unit:'ถุง'},
-        {name:'ใบย่านาง',unit:'ถุง'}, {name:'บุ้งจีน',unit:'ถุง'}, {name:'ผักกระเฉด',unit:'ถุง'},
-        {name:'ชะอม',unit:'ถุง'}, {name:'แตง',unit:'ถุง'}, {name:'ฟักทอง',unit:'ถุง'}
-      ],
-      'เข๋ง(เช็คทุกวัน)': [
-        {name:'มะนาวแป้น',unit:'ตระกร้า'}, {name:'มะนาวสวน',unit:'ถุง'}, {name:'มะเขือเทศส้ม',unit:'ตระกร้า'},
-        {name:'มะเขือเทศท้อ',unit:'ตระกร้า'}, {name:'มะเขือเหลือง',unit:'ถุง'}, {name:'มะเขือเปราะ',unit:'ถุง'},
-        {name:'มะเขือพวง',unit:'ถุง'}, {name:'ถั่วฝักยาว',unit:'ตระกร้า'}, {name:'พริกจินดาแดง',unit:'ตระกร้า'},
-        {name:'พริกจินดาเขียว',unit:'ตระกร้า'}, {name:'พริกขี้หนูสวน',unit:'ตระกร้า'}, {name:'พริกยอดสน',unit:'ถุง'},
-        {name:'พริกแห้งใหญ่',unit:'ถุง'}, {name:'พริกแห้งเล็ก',unit:'ถุง'}, {name:'กระเทียมแกะโล',unit:'ถุง'},
-        {name:'กระเทียมกลีบเล็ก',unit:'ถุง'}, {name:'หอมแดงแกะ',unit:'ถุง'}, {name:'หอมแดงปอก',unit:'ถุง'},
-        {name:'มะละกอดำเนิน',unit:'ถุง'}, {name:'มะละกอแขกดำ',unit:'ถุง'}, {name:'มะม่วงเบา',unit:'ถุง'},
-        {name:'มะม่วงน้ำดอกไม้',unit:'ถุง'}, {name:'มะขามเปียก',unit:'ถุง'}, {name:'กระเฉด',unit:'มัด'},
-        {name:'ผักชีฝรั่ง',unit:'ถุง'}, {name:'ขิงซอย',unit:'ถุง'}, {name:'กระชายซอย',unit:'ถุง'},
-        {name:'มะกรูดลูก',unit:'ถุง'}
-      ],
-      'ลา(เช็คทุกวัน)': [
-        {name:'ปูจืด',unit:'ตระกร้า'}, {name:'ปูแสม',unit:'ตระกร้า'}, {name:'ปูม้า',unit:'กล่อง'},
-        {name:'หอยเชอรี่',unit:'กระปุก'}, {name:'หอยดอง',unit:'ขวด'}, {name:'ปลาร้าต้มต่อน',unit:'กระปุก'},
-        {name:'ปลาร้าดิบต่อน',unit:'กระปุก'}, {name:'กุ้งฝอย',unit:'กระปุก'}, {name:'เม็ดกระถิน',unit:'กระปุก'},
-        {name:'ขนมจีน',unit:'ตะกร้า'}, {name:'เส้นเล็ก',unit:'ห่อ'}, {name:'เส้นหมี่ขาว',unit:'ห่อ'},
-        {name:'ดุกย่าง',unit:'ตัว'}, {name:'หัวไก่ย่าง',unit:'ไม้'}, {name:'ตูดไก่ย่าง',unit:'ไม้'},
-        {name:'ตับไก่ย่าง',unit:'ไม้'}, {name:'กึ๋นไก่ย่าง',unit:'ไม้'}, {name:'โครงไก่ย่าง',unit:'ตัว'},
-        {name:'หนังไก่ทอด',unit:'ถุง'}, {name:'แคปหมูติดมัน',unit:'ถุง'}, {name:'แคปหมูไร้มัน',unit:'ถุง'},
-        {name:'ถั่วกระจก',unit:'ถุง'}, {name:'ปลากรอบ',unit:'ถุง'}, {name:'หมูยออุบล',unit:'แท่ง'}
-      ]
+{ name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ขวด'},{ name:'ฝาเขียว',unit:'ขวด'},
+{ name:'น้ำปลาเล็ก',unit:'ขวด'},{ name:'น้ำปลาใหญ่',unit:'ขวด'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ถุง'},
+{ name:'น้ำจิ้มไก่เล็ก',unit:'แพค'},{ name:'แป้งทอดกรอบ',unit:'ถุง'},{ name:'หนังยาง',unit:'ถุง'},
+{ name:'ทรายขาว',unit:'ถุง'},{ name:'ม้าบิน',unit:'ถุง'},{ name:'น้ำมัน',unit:'ถุง'},
+{ name:'ชูรส',unit:'ถุง'},{ name:'กะปิ',unit:'กระปุก'},{ name:'รสดีหมู',unit:'ถุง'},
+{ name:'นมสด',unit:'กระป๋อง'},{ name:'น้ำยาล้างล้างจาน',unit:'แกลลอน'},{ name:'น้ำยาล้างห้องน้ำ',unit:'แกลลอน'},
+{ name:'น้ำยาถูพื้น',unit:'แกลลอน'},{ name:'สบู่ล้างมือ',unit:'แกลลอน'},{ name:'ผงซักฟอก',unit:'ถุง'},
+{ name:'ทิชชู',unit:'แพค'},{ name:'หลอดสั้น',unit:'แพค'},{ name:'หลอดยาว',unit:'แพค'} , 
+{ name:'น้ำมะนาวขวด',unit:'ขวด'} , { name:'แอลกอฮอลล์',unit:'ถุง'} , { name:'กระเทียมเจียว',unit:'ถุง'}
+],
+'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': [
+{name:'กล่องล็อก',unit:'แพค'},
+{name:'ถ้วย 45',unit:'แพค'},
+{name:'กล่อง1000ml',unit:'แพค'},
+{name:'ถ้วย 1 ออนซ์',unit:'แพค'},
+{name:'ถ้วย 2 ออนซ์',unit:'แพค'},
+{name:'สมุดฉีก',unit:'แพค'},
+{name:'ช้อนพลาสติก',unit:'แพค'},
+{name:'ส้อมพลาสติก',unit:'แพค'},
+{name:'ไม้เสียบปลาดุก',unit:'ห่อ'},
+{name:'ถุงเย็น ใส่ไก่',unit:'ห่อ'},
+{name:'12 × 20',unit:'ห่อ'},
+{name:'4 × 6',unit:'ห่อ'},
+{name:'5 × 8',unit:'ห่อ'},
+{name:'6 × 9',unit:'ห่อ'},
+{name:'7 × 11',unit:'ห่อ'},
+{name:'6 × 14',unit:'ห่อ'},
+{name:'7 × 15',unit:'ห่อ'},
+{name:'8 × 16',unit:'ห่อ'},
+{name:'9 × 18',unit:'ห่อ'},
+{name:'มาม่า',unit:'ห่อ'},
+{name:'รสดีเนื้อ',unit:'ห่อ'},
+{name:'พริกไทยเม็ด',unit:'ห่อ'},
+{name:'น้ำตาลปี๊บหนึ่งโล',unit:'ลัง'},
+{name:'น้ำตาลปี๊บครึ่งโล',unit:'ลัง'},
+{name:'น้ำกระเทียมดอง',unit:'ขวด'},
+{name:'สิริพร',unit:'แพค'},
+{name:'ถั่วลิสง',unit:'ถุง'},
+{name:'เกลือห่อเล็ก',unit:'แพค'},
+{name:'เกลือห่อใหญ่',unit:'ห่อ'},
+{name:'ข้าวหอมมะลิ',unit:'กระติก'},
+{name:'ข้าวสาร',unit:'ถัง'}
+],
+
+'พี่หยี เช็คทุกวัน': [
+  { name: 'สันคอบด', unit: 'ถ้วย' }, { name: 'สันคอ', unit: 'ถ้วย' },
+{ name: 'โครงแก้ว', unit: 'ถุง' }, { name: 'เล้ง', unit: 'ถุง' },
+{ name: 'ไส้อ่อน', unit: 'ถ้วย' }, { name: 'ตับหมู', unit: 'ถุง' },
+{ name: 'หมูสามชั้น', unit: 'กิโลกรัม' }, { name: 'คอย่าง', unit: 'ถ้วย' },
+{ name: 'หนังหมู', unit: 'ถ้วย' }, { name: 'ลิ้นหมู', unit: 'ถ้วย' },
+{ name: 'กุ้งสด', unit: 'ถุง' }, { name: 'ปลาหมึก', unit: 'กระปุก' },
+{ name: 'หอยแครง', unit: 'กิโลกรัม' },
+
+  { name: 'รายการเดือนละครั้ง', unit: '' },
+  { name: 'ถุงดำ', unit: 'แพค' }, { name: 'กระดาษไลแมน', unit: 'แถว'  },
+  {name: 'กระดาษเครื่องปริ้น', unit: 'กล่อง' },
+
+ ],
+'ผักสด': [
+{name:'ข่า',unit:'ถุง'},
+{name:'ตะไคร้',unit:'ถุง'},
+{name:'ใบมะกรูด',unit:'ถุง'},
+{name:'กวางตุ้ง',unit:'ถุง'},
+{name:'ชะพลู',unit:'ถุง'},
+{name:'ชีลาว',unit:'ถุง'},
+{name:'ใบแมงลัก',unit:'ถุง'},
+{name:'สะระแหน่',unit:'ถุง'},
+{name:'พริกลาว',unit:'ถุง'},
+{name:'ใบย่านาง',unit:'ถุง'},
+{name:'บุ้งจีน',unit:'ถุง'},
+{name:'ผักกระเฉด',unit:'ถุง'},
+{name:'ชะอม',unit:'ถุง'},
+{name:'แตง',unit:'ถุง'},
+{name:'ฟักทอง',unit:'ถุง'},
+{name:'รายการวันเว้นวัน',unit:''},
+{name:'หน่อไม้ซุป',unit:'ถุง'},
+{name:'หน่อไม้ตำ',unit:'ถุง'},
+{name:'ปลาร้าถุง',unit:'ถุง'}
+ ],
+'เข๋ง(เช็คทุกวัน)': [
+{name:'หอยดอง',unit:'ถุง'},
+{name:'ปูเค็ม',unit:'ถุง'},
+{name:'ถั่วงอก',unit:'ถุง'},
+{name:'ไข่เค็ม',unit:'ถุง'},
+{name:'ไข่ไก่',unit:'ถุง'}
+ ],
+'ลา(เช็คทุกวัน)': [
+{name:'เนื้อย่าง',unit:'ถ้วย'},
+{name:'เนื้อลาบ',unit:'ฝ่ามือ'},
+{name:'ผ้าขี้ริ้ว',unit:'นิ้วมือ'},
+{name:'ตับ',unit:'นิ้วมือ'},
+{name:'น่องลาย',unit:'ถุง'},
+{name:'ต้ม',unit:'ถ้วย'},
+{name:'พริกป่น',unit:'ถุง'},
+{name:'กระเทียม',unit:'ถุง'},
+{name:'พริกแห้ง',unit:'ถุง'}
+ ]
+
+
     };
 
+    function getUnitGroup_(unitStr){
+      const u = (unitStr || "").trim();
+      if (u === "กิโลกรัม/กรัม" || u === "กรัม/กิโลกรัม") return "weight_kg";
+      if (u === "ขวด/แพ็ค" || u === "ขวด/แพค") return "bottle_pack12";
+      if (u === "ขวด/ลัง") return "bottle_crate24";
+      return null;
+    }
+
+    const ITEM_META_BY_NAME = (() => {
+      const map = {};
+      for (const [cat, items] of Object.entries(stockItems)) {
+        for (const it of items) {
+          if (!it || !it.name) continue;
+          const defUnit = it.unit || "";
+          const unitGroup = getUnitGroup_(defUnit);
+          map[it.name] = { defaultUnit: defUnit, unitGroup, category: cat };
+        }
+      }
+      return map;
+    })();
+
+    const UNIT_OPTIONS_BY_ITEM = {
+      "อกไก่": ["กิโลกรัม","กรัม"],
+      "ปลาหมึก": ["กิโลกรัม","กรัม"],
+      "กุ้ง": ["กิโลกรัม","กรัม"],
+      "สปาเก็ตตี้": ["กิโลกรัม","กรัม"],
+      "กากเจียว": ["กิโลกรัม","กรัม"]
+    };
+
+    function getUnitOptions_(item){
+      const byName = UNIT_OPTIONS_BY_ITEM[item.name];
+      if (byName && Array.isArray(byName) && byName.length) return byName.slice();
+      const u = String((item && item.unit) || "").trim();
+      if (u.includes("/")) return u.split("/").map(s=>s.trim()).filter(Boolean);
+      if (u === "กรัม" || u === "กิโลกรัม") return ["กรัม","กิโลกรัม"];
+      return null;
+    }
+
+    function normalizeQtyToBase_(qty, unitSelected, unitOptions) {
+      const n = Number(qty);
+      if (!isFinite(n)) return { qty: NaN, unit: String(unitSelected || '').trim() };
+
+      const u = String(unitSelected || '').trim();
+      const opts = (unitOptions || []).map(x => String(x || '').trim());
+
+      if (opts.includes('กรัม') && opts.includes('กิโลกรัม')) {
+        if (u === 'กรัม') return { qty: n / 1000, unit: 'กิโลกรัม' };
+        return { qty: n, unit: 'กิโลกรัม' };
+      }
+
+      if (opts.includes('ขวด') && opts.includes('ลัง')) {
+        if (u === 'ลัง') return { qty: n * 24, unit: 'ขวด' };
+        return { qty: n, unit: 'ขวด' };
+      }
+
+      if (opts.includes('ขวด') && (opts.includes('แพ็ค') || opts.includes('แพค'))) {
+        if (u === 'แพ็ค') return { qty: n * 12, unit: 'ขวด' };
+        return { qty: n, unit: 'ขวด' };
+      }
+
+      return { qty: n, unit: u };
+    }
+
+    function getComparableQty_(it) {
+      if (it && typeof it.quantity_base === 'number' && isFinite(it.quantity_base)) return it.quantity_base;
+      const rawQty = Number(it?.quantity_raw ?? it?.quantity ?? NaN);
+      const unitSelected = String(it?.unit_raw ?? it?.unit ?? '').trim();
+      const unitGroup = String(it?.unit_group ?? it?.unit ?? '').trim();
+      const unitOptions = getUnitOptions_(unitGroup) || (unitSelected ? [unitSelected] : null);
+      if (!unitOptions) return rawQty;
+      const norm = normalizeQtyToBase_(rawQty, unitSelected, unitOptions);
+      return norm.qty;
+    }
+
+    function getDisplayUnit_(it){
+      const meta = (it && it.name) ? (ITEM_META_BY_NAME[it.name] || null) : null;
+      const unitDef = meta ? (meta.defaultUnit || "") : "";
+      const unitOptions = getUnitOptions_({ name: it?.name || "", unit: unitDef });
+      const unitSelected = (it && it.unit) ? String(it.unit).trim() : "";
+      const normalized = normalizeQtyToBase_(1, unitSelected, unitOptions);
+      return normalized.unit || unitSelected || unitDef || "";
+    }
+
+function fmtQty(v){
+  if (v === null || v === undefined) return "";
+  if (typeof v === "string" && v.trim() === "") return "";
+
+  const n = Number(v);
+  if (!isFinite(n)) return String(v);
+
+  // แสดงทศนิยมสูงสุด 2 ตำแหน่ง
+  let s = n.toFixed(2);
+
+  // ตัด .00 หรือ 0 ท้าย
+  s = s.replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
+
+  return s;
+}
+
+    function shouldCeilDisplayByUnit_(unit){
+      const u = String(unit || "").trim();
+      return u !== "กรัม" && u !== "กิโลกรัม";
+    }
+
+function applyDisplayRounding_(qty){
+  const n = Number(qty);
+  if (!isFinite(n)) return qty;
+
+  // ปัดแบบมาตรฐาน + กัน floating point error (เช่น 0.255)
+  return Math.round((n + Number.EPSILON) * 100) / 100;
+}
+
+function getDisplayQty_(it){
+  const qtyRaw = (it && it.quantity !== undefined && it.quantity !== null) ? it.quantity : "";
+
+  const meta = (it && it.name) ? (ITEM_META_BY_NAME[it.name] || null) : null;
+  const unitDef = meta ? (meta.defaultUnit || "") : "";
+
+  const unitOptions = getUnitOptions_({ name: it?.name || "", unit: unitDef });
+  const unitSelected = (it && it.unit) ? String(it.unit).trim() : "";
+
+  const normalized = normalizeQtyToBase_(qtyRaw, unitSelected, unitOptions);
+
+  return applyDisplayRounding_(normalized.qty);
+}
+
     let currentCategory = '';
-    let globalHistoryCache = [];
+    let checkerName = '';
+    let allRecords = [];
+    let sheetPollTimer = null;
 
-    window.addEventListener('DOMContentLoaded', () => {
-      setupDate_();
-      pollData_();
-      setInterval(pollData_, SHEET_POLL_MS);
-    });
+    const defaultConfig = {
+      shop_name: 'ส้มตำสี่แยกแซ่บนัว',
+      primary_color: '#ea580c',
+      secondary_color: '#ffffff',
+      text_color: '#1f2937',
+      accent_color: '#22c55e',
+      bg_color: '#fff7ed'
+    };
 
-    function setupDate_(){
-      const d = new Date();
-      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      const s = d.toLocaleDateString('th-TH', options);
-      const cd = document.getElementById('current-date');
-      if(cd) cd.textContent = s;
-      const fDate = document.getElementById('filter-date');
-      if(fDate) {
-        const yyyy = d.getFullYear();
-        const mm = String(d.getMonth()+1).padStart(2,'0');
-        const dd = String(d.getDate()).padStart(2,'0');
-        fDate.value = `${yyyy}-${mm}-${dd}`;
+    const DRAFT_KEY = "rosjana_stock_draft_v1";
+
+    function loadDraft_() {
+      try { return JSON.parse(localStorage.getItem(DRAFT_KEY) || "{}"); }
+      catch(e){ return {}; }
+    }
+
+    function saveDraft_(draft) {
+      try { localStorage.setItem(DRAFT_KEY, JSON.stringify(draft)); } catch(e){}
+    }
+
+    function setDraftValue_(category, itemName, field, value) {
+      const draft = loadDraft_();
+      if (!draft[category]) draft[category] = {};
+      if (!draft[category][itemName]) draft[category][itemName] = {};
+      draft[category][itemName][field] = value;
+      saveDraft_(draft);
+    }
+
+    function getDraftValue_(category, itemName, field) {
+      const draft = loadDraft_();
+      return draft?.[category]?.[itemName]?.[field] ?? "";
+    }
+
+    function clearDraft_(category) {
+      const draft = loadDraft_();
+      if (draft[category]) delete draft[category];
+      saveDraft_(draft);
+    }
+
+    const dataHandler = {
+      onDataChanged(data) {
+        allRecords = Array.isArray(data) ? data : [];
+        if (!document.getElementById('history-page').classList.contains('hidden')) {
+          renderHistory();
+        }
+      }
+    };
+
+    let lastSheetSyncAt = 0;
+
+    async function fetchHistoryFromSheet_(limit = 300) {
+      try {
+        if (typeof GOOGLE_SHEET_WEBAPP_URL !== "string" || !GOOGLE_SHEET_WEBAPP_URL.startsWith("https://script.google.com/macros/s/")) {
+          return [];
+        }
+        const url = GOOGLE_SHEET_WEBAPP_URL + "?limit=" + encodeURIComponent(String(limit));
+        const resp = await fetch(url, { method: "GET" });
+        const data = await resp.json().catch(() => null);
+        if (!data || data.ok !== true || !Array.isArray(data.records)) return [];
+        return data.records;
+      } catch (e) {
+        console.warn("fetchHistoryFromSheet_ failed:", e);
+        return [];
       }
     }
 
-    function selectCategory(cat){
-      currentCategory = cat;
-      document.getElementById('home-page').classList.add('hidden');
-      document.getElementById('name-page').classList.remove('hidden');
-      
+    async function syncHistoryFromSheet_({ silent = true } = {}) {
+      const now = Date.now();
+      if (now - lastSheetSyncAt < 1500) return;
+      lastSheetSyncAt = now;
+
+      const records = await fetchHistoryFromSheet_(500);
+      if (records.length) {
+        allRecords = records;
+        if (document.getElementById('history-page') && !document.getElementById('history-page').classList.contains('hidden')) {
+          renderHistory();
+        }
+      } else if (!silent) {
+        showToast("ยังไม่พบข้อมูลใน Google Sheet", "error");
+      }
+    }
+
+    const QTY_ALLOWED_RE = /[0-9.\-+\/]/;
+
+    function sanitizeQuantityRaw_(raw) {
+      let out = "";
+      for (const ch of String(raw || "")) {
+        if (QTY_ALLOWED_RE.test(ch)) out += ch;
+      }
+      out = out.replace(/(?!^)[+-]/g, "");
+      return out;
+    }
+
+    function parseQuantity_(raw) {
+      const s = String(raw || "").trim();
+      if (!s) return { ok: true, value: 0 };
+
+      if (/^[+-]?\d*(?:\.\d+)?$/.test(s)) {
+        const v = Number(s);
+        if (Number.isFinite(v)) return { ok: true, value: v };
+        return { ok: false, value: 0 };
+      }
+
+      const m = s.match(/^([+-]?\d*(?:\.\d+)?)\s*\/\s*(\d*(?:\.\d+)?)$/);
+      if (m) {
+        const aStr = m[1];
+        const bStr = m[2];
+        if (!aStr || aStr === "+" || aStr === "-") return { ok: false, value: 0 };
+        if (!bStr) return { ok: false, value: 0 };
+        const a = Number(aStr);
+        const b = Number(bStr);
+        if (!Number.isFinite(a) || !Number.isFinite(b) || b === 0) return { ok: false, value: 0 };
+        return { ok: true, value: a / b };
+      }
+
+      return { ok: false, value: 0 };
+    }
+
+    function sanitizeQuantityInput(el) {
+      const before = el.value;
+      const after = sanitizeQuantityRaw_(before);
+      if (before !== after) el.value = after;
+
+      const p = parseQuantity_(el.value);
+      el.classList.toggle("qty-invalid", !p.ok && el.value.trim() !== "");
+
+      const item = el.getAttribute("data-item");
+      setDraftValue_(currentCategory, item, "quantity_raw", el.value);
+    }
+
+    function onQtyKeyDown_(e) {
+      const ctrl = ["Backspace","Delete","ArrowLeft","ArrowRight","Tab","Home","End","Enter"];
+      if (ctrl.includes(e.key) || e.ctrlKey || e.metaKey) return;
+      if (!QTY_ALLOWED_RE.test(e.key)) {
+        e.preventDefault();
+        return;
+      }
+    }
+
+    async function fetchFromGoogleSheet_() {
+      if (!GOOGLE_SHEET_WEBAPP_URL || GOOGLE_SHEET_WEBAPP_URL.includes("PASTE_YOUR")) return null;
+      try {
+        const res = await fetch(GOOGLE_SHEET_WEBAPP_URL + "?action=list");
+        const data = await res.json().catch(() => null);
+        if (!res.ok || !data) return null;
+        if (Array.isArray(data.records)) return data.records;
+        return null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    async function startSheetPolling_() {
+      if (sheetPollTimer) clearInterval(sheetPollTimer);
+      if (!GOOGLE_SHEET_WEBAPP_URL || GOOGLE_SHEET_WEBAPP_URL.includes("PASTE_YOUR")) return;
+      const initial = await fetchFromGoogleSheet_();
+      if (initial && initial.length) mergeRecords_(initial);
+      sheetPollTimer = setInterval(async () => {
+        const recs = await fetchFromGoogleSheet_();
+        if (recs && recs.length) mergeRecords_(recs);
+      }, SHEET_POLL_MS);
+    }
+
+    function mergeRecords_(incoming) {
+      const byId = new Map((allRecords || []).map(r => [String(r.id || r.__backendId || ""), r]));
+      for (const r of incoming) {
+        const k = String(r.id || r.__backendId || "");
+        if (!k) continue;
+        if (!byId.has(k)) byId.set(k, r);
+      }
+      allRecords = Array.from(byId.values());
+      if (!document.getElementById('history-page').classList.contains('hidden')) {
+        renderHistory();
+      }
+    }
+
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      if (lang === 'th') localStorage.setItem('lang', 'th');
+      else localStorage.removeItem('lang');
+
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + lang).classList.add('active');
+
+      updateLanguage();
+      rerenderVisiblePages();
+    }
+
+    function updateLanguage() {
+      const t = translations[currentLanguage];
+
+      document.getElementById('txt-daily-check').textContent = t.dailyCheck;
+      document.getElementById('txt-history').textContent = t.history;
+      document.getElementById('txt-date2').textContent = t.date2;
+      document.getElementById('cat-boat').textContent = t.boatFront;
+      document.getElementById('cat-boat-desc').textContent = t.boatFrontDesc;
+      document.getElementById('cat-food').textContent = t.customFood;
+      document.getElementById('cat-food-desc').textContent = t.customFoodDesc;
+      document.getElementById('cat-staff').textContent = t.staffChild;
+      document.getElementById('cat-staff-desc').textContent = t.staffChildDesc;
+
+      document.getElementById('txt-back-home').textContent = t.backHome;
+      document.getElementById('txt-staff-name-title').textContent = t.staffName;
+      document.getElementById('txt-staff-name-desc').textContent = t.enterName;
+      document.getElementById('txt-full-name-label').textContent = t.fullName;
+      document.getElementById('btn-start-checking').textContent = t.startChecking;
+
+      document.getElementById('txt-back').textContent = t.back;
+      document.getElementById('txt-item').textContent = t.item;
+      document.getElementById('txt-quantity').textContent = t.quantity;
+      document.getElementById('txt-unit').textContent = t.unit;
+      document.getElementById('txt-note').textContent = t.note;
+      document.getElementById('txt-staff-checker').textContent = t.staffChecker;
+      document.getElementById('txt-date-label').textContent = t.date;
+      document.getElementById('txt-save').textContent = t.save;
+
+      document.getElementById('txt-back-home2').textContent = t.backHome;
+      document.getElementById('txt-history-title').textContent = t.historyTitle;
+      document.getElementById('txt-select-date').textContent = t.selectDate;
+      document.getElementById('txt-category-label').textContent = t.category;
+      document.getElementById('opt-all').textContent = t.all;
+      document.getElementById('txt-no-history').textContent = t.noHistory;
+      document.getElementById('txt-back-history').textContent = t.backHistory;
+    }
+
+    function rerenderVisiblePages() {
+      try {
+        const stockPage = document.getElementById('stock-page');
+        const historyPage = document.getElementById('history-page');
+        const detailPage = document.getElementById('history-detail-page');
+        if (stockPage && !stockPage.classList.contains('hidden')) renderStockTable();
+        if (historyPage && !historyPage.classList.contains('hidden')) renderHistory();
+        if (detailPage && !detailPage.classList.contains('hidden') && window.__currentDetailRecord) {
+          showHistoryDetail(window.__currentDetailRecord);
+        }
+      } catch (e) {}
+    }
+
+    function formatDate(date, lang) {
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      return new Date(date).toLocaleDateString(lang === 'lo' ? 'lo-LA' : lang === 'my' ? 'my-MM' : 'en-US', options);
+    }
+
+    function formatFullDate(date, lang) {
+      const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+      return new Date(date).toLocaleDateString(lang === 'lo' ? 'lo-LA' : lang === 'my' ? 'my-MM' : 'en-US', options);
+    }
+
+    function getPreviousRecord(category, currentDate) {
+      const curr = currentDate ? new Date(currentDate).getTime() : null;
+      const filtered = (allRecords || [])
+        .filter(r => r.category === category)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      if (!filtered.length) return null;
+      if (!curr) return filtered.length > 1 ? filtered[1] : null;
+      const prev = filtered.find(r => new Date(r.date).getTime() < curr);
+      return prev || null;
+    }
+
+    function getItemFromRecord(record, itemName) {
+      const items = JSON.parse(record.items || '[]');
+      return items.find(i => i.name === itemName);
+    }
+
+    async function init() {
+      const today = new Date();
+      document.getElementById('current-date').textContent = formatDate(today, currentLanguage);
+      document.getElementById('filter-date').valueAsDate = today;
+
+      startSheetPolling_();
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: async (config) => {
+            const shopName = config.shop_name || defaultConfig.shop_name;
+            document.getElementById('shop-title').textContent = '🍜 ' + shopName;
+          },
+          mapToCapabilities: (config) => ({
+            recolorables: [
+              { get: () => config.bg_color || defaultConfig.bg_color, set: (v) => { config.bg_color = v; window.elementSdk.setConfig({ bg_color: v }); } },
+              { get: () => config.secondary_color || defaultConfig.secondary_color, set: (v) => { config.secondary_color = v; window.elementSdk.setConfig({ secondary_color: v }); } },
+              { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+              { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); } },
+              { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } }
+            ],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+          }),
+          mapToEditPanelValues: (config) => new Map([
+            ['shop_name', config.shop_name || defaultConfig.shop_name]
+          ])
+        });
+      }
+
+      await syncHistoryFromSheet_({ silent: true });
+      setInterval(() => { syncHistoryFromSheet_({ silent: true }); }, 8000);
+      updateLanguage();
+    }
+
+    function showPage(pageId) {
+      const pages = ['home-page', 'name-page', 'stock-page', 'history-page', 'history-detail-page'];
+      pages.forEach(p => document.getElementById(p).classList.add('hidden'));
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+
+    function goHome() { showPage('home-page'); }
+    function goToNamePage() { showPage('name-page'); }
+
+    function selectCategory(category) {
+      currentCategory = category;
       const badge = document.getElementById('category-badge');
-      if(badge) {
-        badge.textContent = cat;
-        badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${getCategoryColorClass_(cat)}`;
-      }
-      
-      const cachedName = localStorage.getItem('checker_name_v2');
-      if(cachedName) document.getElementById('checker-name').value = cachedName;
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
+
+      badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
+      badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
+
+      document.getElementById('checker-name').value = '';
+      showPage('name-page');
     }
 
-    function getCategoryColorClass_(cat){
-      if(cat==='แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส') return 'bg-orange-500';
-      if(cat==='เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส') return 'bg-emerald-500';
-      if(cat==='พี่หยี เช็คทุกวัน') return 'bg-blue-500';
-      if(cat==='ผักสด') return 'bg-green-500';
-      if(cat==='เข๋ง(เช็คทุกวัน)') return 'bg-teal-500';
-      return 'bg-red-500
+    function startChecking() {
+      const name = document.getElementById('checker-name').value.trim();
+      if (!name) {
+        document.getElementById('checker-name').classList.add('border-red-500');
+        document.getElementById('checker-name').placeholder = translations[currentLanguage].enterName2;
+        return;
+      }
+      document.getElementById('checker-name').classList.remove('border-red-500');
+
+      checkerName = name;
+      document.getElementById('display-checker-name').textContent = checkerName;
+      const today = new Date();
+      document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
+
+      const badge = document.getElementById('stock-category-badge');
+      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
+      badge.textContent = tCategory(currentCategory);
+
+      renderStockTable();
+      showPage('stock-page');
+    }
+
+    function renderStockTable() {
+      const tbody = document.getElementById('stock-table-body');
+      const items = stockItems[currentCategory] || [];
+      let html = '';
+      let index = 0;
+
+      items.forEach((item) => {
+        if (item.unit === '') {
+          if (html !== '') html += '<tr><td colspan="4" class="h-1"></td></tr>';
+          html += `
+            <tr class="bg-gray-100">
+              <td colspan="4" class="px-4 py-3 font-bold text-gray-700 text-base">${tItem(item.name)}</td>
+            </tr>
+          `;
+        } else {
+          const draftQty = getDraftValue_(currentCategory, item.name, "quantity_raw");
+          const draftNote = getDraftValue_(currentCategory, item.name, "note");
+          const unitSelected = getDraftValue_(currentCategory, item.name, "unit") || (item.unit || "");
+          const unitOptions = getUnitOptions_(item) || [item.unit || ""];
+          let unitHtml = "";
+
+          if (item.unit === "") {
+            unitHtml = "";
+          } else if (unitOptions.length > 1) {
+            unitHtml = `<select class="w-24 px-2 py-1 border border-gray-300 rounded-lg text-sm bg-white"
+                      data-item="${item.name}" data-field="unit"
+                      onchange="setDraftValue_(currentCategory, this.getAttribute('data-item'), 'unit', this.value); markDirty_(); validateForm_();">
+                ${unitOptions.map(u => `<option value="${u}" ${u===unitSelected?'selected':''}>${tUnit(u)}</option>`).join('')}
+              </select>`;
+          } else {
+            unitHtml = `<span class="text-gray-600">${tUnit(unitSelected || item.unit || "")}</span>`;
+          }
+
+          html += `
+            <tr class="slide-in hover:bg-orange-50 transition-colors" style="animation-delay: ${index * 30}ms">
+              <td class="px-4 py-3">
+                <span class="font-medium text-gray-800">${tItem(item.name)}</span>
+              </td>
+              <td class="px-4 py-3">
+                <input type="text"
+                       inputmode="decimal"
+                       autocomplete="off"
+                       data-item="${item.name}"
+                       data-field="quantity_raw"
+                       placeholder="0"
+                       value="${String(draftQty || "").replace(/"/g, "&quot;")}"
+                       onkeydown="onQtyKeyDown_(event)"
+                       oninput="sanitizeQuantityInput(this)"
+                       class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg text-center focus:border-orange-500 focus:outline-none transition-colors text-lg font-medium">
+              </td>
+              <td class="px-4 py-3 text-center text-gray-600 font-medium">${unitHtml}</td>
+              <td class="px-4 py-3">
+                <input type="text"
+                       data-item="${item.name}"
+                       data-field="note"
+                       placeholder="-"
+                       value="${String(draftNote || "").replace(/"/g, "&quot;")}"
+                       oninput="setDraftValue_(currentCategory, this.getAttribute('data-item'), 'note', this.value)"
+                       class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-orange-500 focus:outline-none transition-colors">
+              </td>
+            </tr>
+          `;
+          index++;
+        }
+      });
+
+      tbody.innerHTML = html;
+      document.querySelectorAll('input[data-field="quantity_raw"]').forEach(el => sanitizeQuantityInput(el));
+    }
+
+    async function saveStock() {
+      const btn = document.getElementById('save-btn');
+      const originalBtnHtml = btn.innerHTML;
+
+      const disableBtn_ = () => {
+        btn.disabled = true;
+        btn.innerHTML = `
+          <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          ${translations[currentLanguage].save}
+        `;
+      };
+
+      const enableBtn_ = () => {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnHtml;
+      };
+
+      const withTimeout_ = (promise, ms, label) =>
+        Promise.race([
+          promise,
+          new Promise((_, reject) => setTimeout(() => reject(new Error(label || "TIMEOUT")), ms))
+        ]);
+
+      disableBtn_();
+
+      try {
+        const items = stockItems[currentCategory] || [];
+        const missingEls = [];
+        const invalidEls = [];
+
+        const stockEntries = items.map(item => {
+          if (!item.unit) return { __section: true, name: item.name, unit: item.unit };
+
+          const qtyEl = document.querySelector(`input[data-item="${item.name}"][data-field="quantity_raw"]`);
+          const noteEl = document.querySelector(`input[data-item="${item.name}"][data-field="note"]`);
+
+          const raw = qtyEl ? qtyEl.value.trim() : "";
+          const parsed = parseQuantity_(raw);
+
+          if (qtyEl && raw !== '' && !parsed.ok) invalidEls.push(qtyEl);
+
+          const unitSelectEl = Array.from(document.querySelectorAll('select[data-field="unit"]'))
+            .find(el => el && el.dataset && el.dataset.item === item.name);
+          const unitInput = (unitSelectEl ? unitSelectEl.value : null)
+            || getDraftValue_(currentCategory, item.name, "unit")
+            || (item.unit || "");
+          const qtyNum = parsed.ok ? parsed.value : 0;
+          const unitOptions = getUnitOptions_(item) || [String(item.unit || '').trim()];
+          const norm = normalizeQtyToBase_(qtyNum, unitInput, unitOptions);
+
+          return {
+            name: item.name,
+            unit: norm.unit,
+            unit_input: unitInput,
+            unit_group: String(item.unit || '').trim(),
+            unit_options: unitOptions,
+            quantity_raw: raw,
+            quantity: norm.qty,
+            quantity_base: norm.qty,
+            note: noteEl ? noteEl.value.trim() : ""
+          };
+        }).filter(x => !x.__section);
+
+        
+
+        if (invalidEls.length) {
+          invalidEls.forEach(el => el.classList.add("border-red-500"));
+          invalidEls[0].scrollIntoView({ behavior: "smooth", block: "center" });
+          showToast("รูปแบบจำนวนไม่ถูกต้อง (อนุญาต 0-9 และ . / + -)", "error");
+          return;
+        }
+
+        if (allRecords.length >= 999) {
+          showToast(translations[currentLanguage].fullLimit, 'error');
+          return;
+        }
+
+        const nowIso = new Date().toISOString();
+        const record = {
+          id: Date.now().toString(),
+          category: currentCategory,
+          checker_name: checkerName,
+          date: nowIso,
+          items: JSON.stringify(stockEntries),
+          created_at: nowIso
+        };
+
+        let canvaOk = false;
+        try {
+          if (window.dataSdk && typeof window.dataSdk.create === "function") {
+            const r = await withTimeout_(window.dataSdk.create(record), 15000, "DATA_SDK_TIMEOUT");
+            canvaOk = !!(r && r.isOk);
+          }
+        } catch (e) {
+          console.warn("dataSdk.create failed:", e);
+        }
+
+        let sheetOk = false;
+        try {
+          if (typeof GOOGLE_SHEET_WEBAPP_URL === "string" &&
+              GOOGLE_SHEET_WEBAPP_URL.startsWith("https://script.google.com/macros/s/")) {
+            const payload = {
+              __backendId: "web-" + Date.now().toString(),
+              ...record
+            };
+            const resp = await withTimeout_(
+              fetch(GOOGLE_SHEET_WEBAPP_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "text/plain;charset=utf-8" },
+                body: JSON.stringify(payload)
+              }),
+              15000,
+              "SHEET_POST_TIMEOUT"
+            );
+            sheetOk = !!resp;
+          }
+        } catch (e) {
+          console.warn("sheet POST failed:", e);
+        }
+
+        if (canvaOk || sheetOk) {
+          clearDraft_(currentCategory);
+          showToast(translations[currentLanguage].saved, 'success');
+          setTimeout(() => goHome(), 800);
+        } else {
+          showToast(translations[currentLanguage].error + " (บันทึกไม่สำเร็จ)", 'error');
+        }
+      } catch (err) {
+        console.error(err);
+        showToast(translations[currentLanguage].error, 'error');
+      } finally {
+        enableBtn_();
+      }
+    }
+
+
+function showToast(message, type = 'success') {
+  const toast = document.getElementById('toast');
+  const msgEl = document.getElementById('toast-message');
+  msgEl.textContent = message;
+  toast.className = `fixed bottom-4 left-1/2 transform -translate-x-1/2 ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2 transition-all duration-300`;
+  setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+}
+
+// =========================
+// HISTORY LOADER FIX (JSONP)
+// =========================
+
+function loadJSONP(url, callbackName) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    const sep = url.includes('?') ? '&' : '?';
+    script.src = `${url}${sep}callback=${callbackName}&_=${Date.now()}`;
+
+    window[callbackName] = function (data) {
+      try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
+      if (script.parentNode) script.parentNode.removeChild(script);
+      resolve(data);
+    };
+
+    script.onerror = function () {
+      try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
+      if (script.parentNode) script.parentNode.removeChild(script);
+      reject(new Error('JSONP failed'));
+    };
+
+    document.body.appendChild(script);
+  });
+}
+
+async function fetchHistoryJSONP_() {
+  const cb = 'cb_' + Date.now();
+
+  const res = await loadJSONP(
+    `${GOOGLE_SHEET_WEBAPP_URL}?action=list`,
+    cb
+  );
+
+  if (!res || !res.ok) {
+    throw new Error((res && res.error) || 'โหลดประวัติไม่สำเร็จ');
+  }
+
+  return (res.records || []).map(r => ({
+    ...r,
+    __backendId: r.backendId || r.__backendId || r.id || '',
+    items: r.items || r.items_json || '[]'
+  }));
+}
+
+async function showHistory() {
+  showPage('history-page');
+
+  const listEl = document.getElementById('history-list');
+  const noHistory = document.getElementById('no-history');
+
+  listEl.innerHTML = `
+    <div class="bg-white rounded-xl p-4 shadow-md text-center text-gray-500">
+      กำลังโหลด...
+    </div>
+  `;
+  noHistory.classList.add('hidden');
+
+  try {
+    allRecords = await fetchHistoryJSONP_();
+    renderHistory();
+  } catch (err) {
+    console.error('showHistory JSONP error:', err);
+    listEl.innerHTML = `
+      <div class="bg-white rounded-xl p-4 shadow-md text-center text-red-500">
+        โหลดประวัติไม่สำเร็จ
+      </div>
+    `;
+  }
+}
+
+function filterHistory() { renderHistory(); }
+
+function renderHistory() {
+  const filterDate = document.getElementById('filter-date').value;
+  const filterCategory = document.getElementById('filter-category').value;
+
+  let filtered = [...(allRecords || [])];
+
+  if (filterDate) {
+    filtered = filtered.filter(r => {
+      const raw = String(r.date || '').trim();
+
+      // รองรับ yyyy-mm-dd
+      if (/^\d{4}-\d{2}-\d{2}/.test(raw)) {
+        return raw.slice(0, 10) === filterDate;
+      }
+
+      // รองรับ dd/mm/yyyy
+      if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(raw)) {
+        const [dd, mm, yyyy] = raw.split('/');
+        const normalized = `${yyyy}-${String(mm).padStart(2, '0')}-${String(dd).padStart(2, '0')}`;
+        return normalized === filterDate;
+      }
+
+      const d = new Date(raw);
+      if (!isNaN(d.getTime())) {
+        const normalized = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().split('T')[0];
+        return normalized === filterDate;
+      }
+
+      return false;
+    });
+  }
+
+  if (filterCategory) filtered = filtered.filter(r => r.category === filterCategory);
+
+  filtered.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+  const listEl = document.getElementById('history-list');
+  const noHistory = document.getElementById('no-history');
+
+  if (filtered.length === 0) {
+    listEl.innerHTML = '';
+    noHistory.classList.remove('hidden');
+    return;
+  }
+
+  noHistory.classList.add('hidden');
+
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
+  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
+
+  listEl.innerHTML = filtered.map(record => `
+    <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br ${colors[record.category] || 'from-gray-400 to-gray-500'} rounded-xl flex items-center justify-center text-2xl">
+          ${icons[record.category] || '📦'}
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-gray-800">${tCategory(record.category)}</p>
+          <p class="text-sm text-gray-500">${translations[currentLanguage].staffChecker} ${record.checker_name}</p>
+          <p class="text-sm text-gray-400">${formatFullDate(record.date, currentLanguage)}</p>
+        </div>
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </div>
+    </div>
+  `).join('');
+}
+
+function showHistoryDetail(idOrBackendId) {
+  const record = (allRecords || []).find(r => (r.__backendId || r.id) === idOrBackendId);
+  if (!record) return;
+
+  window.__currentDetailRecord = idOrBackendId;
+
+  let items = [];
+  try {
+    items = JSON.parse(record.items || '[]');
+  } catch (e) {
+    console.error('parse items failed:', e);
+    items = [];
+  }
+
+  const previousRecord = getPreviousRecord(record.category, record.date);
+  const t = translations[currentLanguage];
+  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
+
+  const content = document.getElementById('history-detail-content');
+  content.innerHTML = `
+    <div class="bg-gradient-to-r ${colors[record.category] || 'from-gray-400 to-gray-500'} p-4 text-white">
+      <h3 class="text-xl font-bold mb-2">${tCategory(record.category)}</h3>
+      <p class="text-sm opacity-90">${t.staffChecker} <span class="font-semibold">${record.checker_name}</span></p>
+      <p class="text-sm opacity-90">${t.date} <span class="font-semibold">${formatFullDate(record.date, currentLanguage)}</span></p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.item}</th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.quantity}</th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.unit}</th>
+            ${previousRecord ? `<th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.compared}<br><span class="text-xs font-normal">${formatDate(previousRecord.date, currentLanguage)}</span></th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changeLabel}</th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changePctLabel}</th>` : ''}
+            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.note}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          ${items.map(item => {
+            let comparison = '';
+            let trend = '';
+            if (previousRecord) {
+              const prevItem = getItemFromRecord(previousRecord, item.name);
+              if (prevItem) {
+                const curBase = getComparableQty_(item);
+                const prevBase = getComparableQty_(prevItem);
+                const diff = curBase - prevBase;
+
+                if (diff > 0) trend = `<span class="trend-up">⬆ +${fmtQty(diff)}</span>`;
+                else if (diff < 0) trend = `<span class="trend-down">⬇ ${fmtQty(diff)}</span>`;
+                else trend = `<span class="trend-neutral">- ${t.noChange}</span>`;
+
+                let pctHtml = `<span class="text-gray-400">-</span>`;
+                if (prevBase > 0) {
+                  const pct = (diff / prevBase) * 100;
+                  const sign = pct > 0 ? "+" : "";
+                  const cls = pct > 0 ? "trend-up" : (pct < 0 ? "trend-down" : "trend-neutral");
+                  pctHtml = `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
+                } else if (prevBase === 0 && curBase !== 0) {
+                  pctHtml = `<span class="text-xs text-blue-600">${t.noPrevious}</span>`;
+                }
+
+                comparison = `<td class="px-4 py-3 text-center font-semibold text-gray-600">${fmtQty(getDisplayQty_(prevItem))} ${tUnit(getDisplayUnit_(prevItem))}</td>
+                              <td class="px-4 py-3 text-center font-semibold">${trend}</td>
+                              <td class="px-4 py-3 text-center font-semibold">${pctHtml}</td>`;
+              } else {
+                comparison = `<td class="px-4 py-3 text-center text-gray-400">-</td>
+                              <td class="px-4 py-3 text-center"><span class="text-xs text-blue-600">${t.noPrevious}</span></td>
+                              <td class="px-4 py-3 text-center"><span class="text-gra
+y-400">-</span></td>`;
+              }
+            }
+
+            const displayQty = getDisplayQty_(item);
+            const displayUnit = getDisplayUnit_(item);
+
+            return `
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-800">${tItem(item.name)}</td>
+                <td class="px-4 py-3 text-center font-semibold ${Number(displayQty || 0) > 0 ? 'text-green-600' : 'text-red-500'}">${fmtQty(displayQty)}</td>
+                <td class="px-4 py-3 text-center text-gray-600">${tUnit(displayUnit)}</td>
+                ${comparison}
+                <td class="px-4 py-3 text-gray-500">${item.note || '-'}</td>
+              </tr>
+            `;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  showPage('history-detail-page');
+}
+
+init();
+</script>
+</body>
+</html>
