@@ -628,7 +628,27 @@
       return (k && translations[currentLanguage] && translations[currentLanguage][k]) ? translations[currentLanguage][k] : thCat;
     }
 
-    const stockItems = {
+    
+    const REQUIRED_QTY = {
+      'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': {
+        'กระเทียมเจียว':2,'กะปิ':1,'ชูรส':1,'ซอสหอย':2,'ซีอิ๊วขาว':3,
+        'ทิชชู':3,'ทรายขาว':2,'นมสด':1,'น้ำจิ้มไก่ใหญ่':2,'น้ำจิ้มไก่เล็ก':2,
+        'น้ำปลาใหญ่':3,'น้ำปลาเล็ก':1,'น้ำมัน':2,'น้ำยาล้างจาน':3,
+        'น้ำยาล้างล้างจาน':3,'น้ำยาล้างห้องน้ำ':3,'น้ำยาถูพื้น':3,
+        'น้ำมะนาวขวด':2,'ผงซักฟอก':2,'ฝาเขียว':3,'ม้าบิน':3,
+        'รสดีหมู':2,'หลอดสั้น':2,'หลอดยาว':3,'หนังยาง':3,
+        'สบู่ล้างมือ':2,'แป้งทอดกรอบ':2,'แอลกอฮอลล์':2,'ลองสั้น':2
+      }
+    };
+
+    function getRequiredQty_(name, category){
+      if (REQUIRED_QTY[category] && REQUIRED_QTY[category][name] !== undefined) {
+        return REQUIRED_QTY[category][name];
+      }
+      return 1;
+    }
+
+const stockItems = {
       'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': [
 { name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ขวด'},{ name:'ฝาเขียว',unit:'ขวด'},
 { name:'น้ำปลาเล็ก',unit:'ขวด'},{ name:'น้ำปลาใหญ่',unit:'ขวด'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ถุง'},
@@ -1248,7 +1268,7 @@ function getDisplayQty_(it){
                 <span class="font-medium text-gray-800">${tItem(item.name)}</span>
               </td>
               <td class="px-4 py-3 text-center">
-                <span class="font-semibold text-gray-700">1</span>
+                <span class="font-semibold text-gray-700">${getRequiredQty_(item.name, currentCategory)}</span>
               </td>
               <td class="px-4 py-3">
                 <input type="text"
@@ -1337,6 +1357,8 @@ function getDisplayQty_(it){
 
           return {
             name: item.name,
+            required_qty: getRequiredQty_(item.name, currentCategory),
+            order_qty: Math.max(0, getRequiredQty_(item.name, currentCategory) - qtyNum),
             unit: norm.unit,
             unit_input: unitInput,
             unit_group: String(item.unit || '').trim(),
@@ -1602,8 +1624,10 @@ function showHistoryDetail(idOrBackendId) {
         <thead class="bg-gray-50">
           <tr>
             <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.item}</th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องมี</th>
             <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.quantity}</th>
             <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.unit}</th>
+            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องสั่งเพิ่ม</th>
             ${previousRecord ? `<th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.compared}<br><span class="text-xs font-normal">${formatDate(previousRecord.date, currentLanguage)}</span></th>
             <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changeLabel}</th>
             <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changePctLabel}</th>` : ''}
@@ -1652,8 +1676,10 @@ y-400">-</span></td>`;
             return `
               <tr class="hover:bg-gray-50">
                 <td class="px-4 py-3 font-medium text-gray-800">${tItem(item.name)}</td>
+                <td class="px-4 py-3 text-center font-semibold">${fmtQty(item.required_qty !== undefined ? item.required_qty : getRequiredQty_(item.name, record.category))}</td>
                 <td class="px-4 py-3 text-center font-semibold ${Number(displayQty || 0) > 0 ? 'text-green-600' : 'text-red-500'}">${fmtQty(displayQty)}</td>
                 <td class="px-4 py-3 text-center text-gray-600">${tUnit(displayUnit)}</td>
+                <td class="px-4 py-3 text-center font-semibold text-orange-600">${fmtQty(item.order_qty !== undefined ? item.order_qty : Math.max(0, getRequiredQty_(item.name, record.category) - Number(displayQty || 0)))}</td>
                 ${comparison}
                 <td class="px-4 py-3 text-gray-500">${item.note || '-'}</td>
               </tr>
