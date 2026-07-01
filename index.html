@@ -79,6 +79,19 @@
             </div>
           </button>
 
+          <button onclick="selectCategory('แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)')" class="w-full bg-gradient-to-r from-fuchsia-500 to-fuchsia-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">👩</div>
+              <div class="text-left">
+                <p id="cat-ann" class="text-xl font-bold">แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)</p>
+                <p id="cat-ann-desc" class="text-fuchsia-100 text-sm">เช็คสต็อกแอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)</p>
+              </div>
+              <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </button>
+
           <button onclick="selectCategory('พี่หยี เช็คทุกวัน')" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
             <div class="flex items-center gap-4">
               <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl">🧑‍🍳</div>
@@ -99,6 +112,9 @@
                 <p class="text-xl font-bold">ผักสด</p>
                 <p class="text-green-100 text-sm">เช็คสต๊อกผักสด</p>
               </div>
+              <svg class="w-6 h-6 ml-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
             </div>
           </button>
 
@@ -127,7 +143,7 @@
               </svg>
             </div>
           </button>
-</div>
+        </div>
       </div>
     </div>
 
@@ -229,6 +245,7 @@
                 <option value="" id="opt-all">ทั้งหมด</option>
                 <option value="แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส">แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส</option>
                 <option value="เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส">เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส</option>
+                <option value="แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)">แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)</option>
                 <option value="พี่หยี เช็คทุกวัน">พี่หยี เช็คทุกวัน</option>
                 <option value="ผักสด">ผักสด</option>
                 <option value="เข๋ง(เช็คทุกวัน)">เข๋ง(เช็คทุกวัน)</option>
@@ -283,6 +300,8 @@
         boatFrontDesc: 'เช็คสต็อกวัตถุดิบแม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส',
         customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
         customFoodDesc: 'เช็คสต็อกเจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
+        annCheck: 'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)',
+        annCheckDesc: 'เช็คสต็อกแอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)',
         staffChild: 'พี่หยี เช็คทุกวัน',
         staffChildDesc: 'เช็คสต็อกพี่หยี เช็คทุกวัน',
         backHome: 'กลับหน้าหลัก',
@@ -322,14 +341,16 @@
         stockCheck: 'ລະບົບກວດສອບສະຕ໋ອກ',
         dailyCheck: 'ກວດສອບສະຕ໋ອກປະຈໍາວັນ',
         history: 'ປະຫວັດ',
-        boatFront: 'ໜ້າເຮືອ',
-        boatFrontDesc: 'ກວດສອບວັດຖຸດິບໜ້າເຮືອ',
+        boatFront: 'ໜ້າເຮືอ',
+        boatFrontDesc: 'ກວດສອບວັດຖຸດິບໜ້າເຮືอ',
         customFood: 'ອາຫານຕາມສັ່ງ',
         customFoodDesc: 'ກວດສອບວັດຖຸດິບອາຫານຕາມສັ່ງ',
+        annCheck: 'ແອນ(ເຊັກທຸກວັນອາທິດກັບວັນພະຫັດ)',
+        annCheckDesc: 'ກວດສອບສະຕ໋ອກແອນ(ເຊັກທຸກວันອາທິດກັບວັນພະຫັດ)',
         staffChild: 'ເດັກເສີບ',
         staffChildDesc: 'ກວດສອບອຸປະກອນເດັກເສີບ',
         backHome: 'ກັບໜ້າຫຼັກ',
-        staffName: 'ຜູ້ເຊັກສະຕ໋ອກ',
+        staffName: 'ผู้เช็กสะຕ໋ອກ',
         enterName: 'ກະລຸນາໃສ່ຊື່ຜູ້ເຊັກສະຕ໋ອກ',
         fullName: 'ຊື່-ນາມສະກຸນ',
         startChecking: 'ເລີ່ມເຊັກສະຕ໋ອກ',
@@ -345,7 +366,7 @@
         staffChecker: 'ຜູ້ເຊັກສະຕ໋ອກ:',
         date: 'ວັນທີ:',
         noHistory: 'ບໍ່ພົບປະຫວັດການເຊັກສະຕ໋ອກ',
-        saved: 'ບັນທຶກຂໍ້ມູນສໍາເລັດ!',
+        saved: 'ບັນທຶกຂໍ້ມູນສໍາເລັດ!',
         error: 'ເກີດຂໍ້ຜິດພາດ ກະລຸນາລອງໃໝ່',
         fullLimit: 'ບໍ່ສາມາດບັນທຶກໄດ້ ຂໍ້ມູນເຕັມແລ້ວ (ສູງສຸດ 999 ລາຍການ)',
         enterName2: 'ກະລຸນາໃສ່ຊື່',
@@ -369,6 +390,8 @@
         boatFrontDesc: 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
         customFood: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส',
         customFoodDesc: 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัสရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
+        annCheck: 'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)',
+        annCheckDesc: 'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)ရှိวัตถุดิบကိုစစ်ဆေးခြင်း',
         staffChild: 'เด็กเสิร์ฟ',
         staffChildDesc: 'เด็กเสิร์ฟအသုံးအဆောင်များကိုစစ်ဆေးခြင်း',
         backHome: 'ပင်မစာမျက်နှာသို့ပြန်မည်',
@@ -412,10 +435,10 @@
         "ผักสด": "ဖာစုံ",
         "ใบโหระพา": "ဝါလာဖာ",
         "ผักชีใบเลื่อย": "နံနံပင်",
-        "ผักบุ้ง (ยังไม่ตัด)": "ဖာပု",
-        "ใบเตย": "ဘာတဲ",
+        "ผักบุ้ง (ยังไม่ตัด)": "ဖาပု",
+        "ใบเตย": "ဘာตဲ",
         "ตะไคร้": "တခိုင်း",
-        "ผักชี": "ဖာချီ",
+        "ผักชี": "ဖาချီ",
         "รากผักชี": "နံပင်မြစ်",
         "กระเทียมไทย": "ကထီရိုင်",
         "กระเทียมจีน": "ကထီရိုင်လစ်",
@@ -431,41 +454,41 @@
         "แตงกวา": "သခွာသီး",
         "มะนาว": "သံပုရာသီး",
         "พริกหยวก": "ဖိရွာ",
-        "พริกชี้แดง": "ဖိစိတဲ",
-        "พริกแดง": "ဖိတဲ",
+        "พริกชี้แดง": "ဖิစိတဲ",
+        "พริกแดง": "ဖิတဲ",
         "พริกเขียว": "ခီယို",
-        "พริกขี้หนู": "ခိနို",
+        "พริกขี้หนู": "ခิနို",
         "พริกแห้ง": "ငရုတ်ခြောက်",
         "ขิง": "ဂျင်း",
         "กระชาย": "ကာချိုင်",
         "มัน": "မာ",
         "ใบมะกรูด": "မာကို",
         "เม็ดพริกไทยพวง": "ဖီထိုင်",
-        "หัวไชเท้า": "မေှာ်လာဉ",
-        "ลูกผักชี": "လွတ်ဖာချီ",
-        "ผักกาดดอง": "ဖာခိုင်တော်",
+        "หัวไชเท้า": "မေှา်လာဉ",
+        "ลูกผักชี": "လွတ်ဖาချီ",
+        "ผักกาดดอง": "ဖาခိုင်တော်",
 
         "เครื่องปรุง": "ခင်ယားပို",
         "นมจืด": "နိုကြည်",
-        "เนยจืด (ก้อน)": "အရသာမစိ",
+        "เนยจืด (ก้อน)": "အရသာမစิ",
         "เนยเค็ม (กระปุก)": "နိုင်ခင်",
         "กะทิ": "ကထီး",
-        "น้ำตาลปี๊บ": "ပိ",
+        "น้ำตาลปี๊บ": "ပิ",
         "แป้งมันสัปปะหลัง": "ပဲမာ",
-        "ผงหมักเนื้อสัตว์": "ဖိုမာနီယား",
+        "ผงหมักเนื้อสัตว์": "ဖိုမာနีယား",
         "น้ำตาลทรายขาว": "သကြားဖြူ",
         "น้ำตาลทรายแดง (ห่อสีม่วง)": "သကြားနီ",
         "เกลือ": "ဆား",
         "ดอกเกลือ": "ပန်းဆား",
         "ซีอิ๊วขาว": "ဦးခေါင်",
-        "ซอสฝาเขียว": "ဖာခင်",
+        "ซอสฝาเขียว": "ဖาခင်",
         "ซอสน้ำมันหอย": "နားမာဟုတ်",
         "น้ำส้มสายชู": "ဆာချို",
         "น้ำปลาทิพรส": "ငံပျာရည်သေး",
         "พริกแกง": "ဖီကယ်",
         "เหล้าจีน": "အရက်",
         "น้ำมันงา": "နားမာငံ",
-        "น้ำมันพืช": "ဆီ",
+        "น้ำมันพืช": "ဆี",
         "ผงชูรส": "အချိုမှုန့်",
         "รสดีไก่": "ခနောကြက်",
         "รสดีหมู": "ခနောဝက်",
@@ -489,7 +512,7 @@
         "ข้าว": "ခေါက်",
         "ข้าวตราสามงู": "တိုင်ဆာငူ",
         "ข้าวตรามังกร": "တိုင်မကော်",
-        "ข้าวสารทำข้าวผัด": "ခေါက်ဖာ",
+        "ข้าวสารทำข้าวผัด": "ခေါက်ဖา",
         "ข้าวเหนียว": "ကောက်ညှင်း",
         "สปาเก็ตตี้": "စပါကိတ်တိ"
       }
@@ -508,7 +531,7 @@
         "ถุง": "ຖົງ",
         "ซอง": "ຊອງ",
         "กล่อง": "ກ່ອງ",
-        "กระป๋อง": "ກະປ໋ອງ",
+        "กระပ໋อง": "ກະປ໋ອງ",
         "กระปุก": "ກະປຸກ",
         "ชิ้น": "ຊິ້ນ",
         "คู่": "ຄູ່",
@@ -522,7 +545,7 @@
         "แถว": "ແຖວ",
         "โหล": "ໂຫຼ",
         "ไม้": "ໄມ້",
-        "แกนลอน": "ແກນລອນ",
+        "แกนลอน": "ແກนລອນ",
         "กรัม": "ກຣາມ"
       },
       my: {
@@ -541,7 +564,7 @@
         "ขวด/แพ็ค": "ခိုဝါ/ပက်",
         "ขวด/ลัง": "ခိုဝါ/လှောင်",
         "กล่อง": "သေတ္တာ",
-        "กระป๋อง": "တင်း",
+        "กระပောင်း": "တင်း",
         "กระปุก": "ဘူး",
         "ชิ้น": "ခု",
         "คู่": "စုံ",
@@ -621,6 +644,7 @@
       const catKeyMap = {
         'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'boatFront',
         'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'customFood',
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': 'annCheck',
         'พี่หยี เช็คทุกวัน': 'staffChild',
         'ผักสด': 'staffChild'
       };
@@ -647,6 +671,14 @@
         'น้ำมะนาวขวด':12,'ผงซักฟอก':6,'ฝาเขียว':3,'ม้าบิน':9,
         'รสดีหมู':4,'หลอดสั้น':1,'หลอดยาว':1,'หนังยาง':3,
         'สบู่ล้างมือ':1,'แป้งทอดกรอบ':6,'แอลกอฮอลล์':1,'ลองสั้น':2
+      },
+      'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': {
+        'กะหล่ำ':2,'มะเขือเทศ':2,'หอมแขก':2,'มะละกอ':2,'มะนาว':2,
+        'ถั่วฝักยาว':2,'พริกแดง':2,'พริกเขียว':2,'ต้นหอม':2,'โหระพา':2,
+        'ผักกาดสร้อย':2,'ผักแพว':2,'บัวบก':2,'หมูยอ':2,'บวบ':2,
+        'มะเขือม่วง':2,'มะเขือเล็ก':2,'ผักบุ้งแดง':2,'ไหลบัว':2,'ปูนา':2,
+        'หอยเชอรี่(ถามพี่หยี)':2,'ไข่มดแดง(ถามสำราญ)':2,'เห็ดหูหนู(ถามสำราญ)':2,
+        'เส้นเล็ก':2,'กุ้งแห้ง (ถามเข๋ง)':2,'มะขามเปียก':2,'ปาร้าขวด':2
       },
       'พี่หยี เช็คทุกวัน': {
         'สันคอบด':3,'สันคอ':8,'โครงแก้ว':7,'เล้ง':1,'ไส้อ่อน':4,'ตับหมู':3,
@@ -676,117 +708,74 @@
       return 1;
     }
 
-const stockItems = {
+    const stockItems = {
       'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': [
-{ name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ขวด'},{ name:'ฝาเขียว',unit:'ขวด'},
-{ name:'น้ำปลาเล็ก',unit:'ขวด'},{ name:'น้ำปลาใหญ่',unit:'ขวด'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ถุง'},
-{ name:'น้ำจิ้มไก่เล็ก',unit:'แพค'},{ name:'แป้งทอดกรอบ',unit:'ถุง'},{ name:'หนังยาง',unit:'ถุง'},
-{ name:'ทรายขาว',unit:'ถุง'},{ name:'ม้าบิน',unit:'ถุง'},{ name:'น้ำมัน',unit:'ถุง'},
-{ name:'ชูรส',unit:'ถุง'},{ name:'กะปิ',unit:'กระปุก'},{ name:'รสดีหมู',unit:'ถุง'},
-{ name:'นมสด',unit:'กระป๋อง'},{ name:'น้ำยาล้างล้างจาน',unit:'แกลลอน'},{ name:'น้ำยาล้างห้องน้ำ',unit:'แกลลอน'},
-{ name:'น้ำยาถูพื้น',unit:'แกลลอน'},{ name:'สบู่ล้างมือ',unit:'แกลลอน'},{ name:'ผงซักฟอก',unit:'ถุง'},
-{ name:'ทิชชู',unit:'แพค'},{ name:'หลอดสั้น',unit:'แพค'},{ name:'หลอดยาว',unit:'แพค'} , 
-{ name:'น้ำมะนาวขวด',unit:'ขวด'} , { name:'แอลกอฮอลล์',unit:'ถุง'} , { name:'กระเทียมเจียว',unit:'ถุง'}
-],
-'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': [
-{name:'กล่องล็อก',unit:'แพค'},
-{name:'ถ้วย 45',unit:'แพค'},
-{name:'กล่อง1000ml',unit:'แพค'},
-{name:'ถ้วย 1 ออนซ์',unit:'แพค'},
-{name:'ถ้วย 2 ออนซ์',unit:'แพค'},
-{name:'สมุดฉีก',unit:'แพค'},
-{name:'ช้อนพลาสติก',unit:'แพค'},
-{name:'ส้อมพลาสติก',unit:'แพค'},
-{name:'ไม้เสียบปลาดุก',unit:'ห่อ'},
-{name:'ถุงเย็น ใส่ไก่',unit:'ห่อ'},
-{name:'12 × 20',unit:'ห่อ'},
-{name:'4 × 6',unit:'ห่อ'},
-{name:'5 × 8',unit:'ห่อ'},
-{name:'6 × 9',unit:'ห่อ'},
-{name:'7 × 11',unit:'ห่อ'},
-{name:'6 × 14',unit:'ห่อ'},
-{name:'7 × 15',unit:'ห่อ'},
-{name:'8 × 16',unit:'ห่อ'},
-{name:'9 × 18',unit:'ห่อ'},
-{name:'มาม่า',unit:'ห่อ'},
-{name:'รสดีเนื้อ',unit:'ห่อ'},
-{name:'พริกไทยเม็ด',unit:'ห่อ'},
-{name:'น้ำตาลปี๊บหนึ่งโล',unit:'ลัง'},
-{name:'น้ำตาลปี๊บครึ่งโล',unit:'ลัง'},
-{name:'น้ำกระเทียมดอง',unit:'ขวด'},
-{name:'สิริพร',unit:'แพค'},
-{name:'ถั่วลิสง',unit:'มัด'},
-{name:'เกลือห่อเล็ก',unit:'แพค'},
-{name:'เกลือห่อใหญ่',unit:'ห่อ'},
-{name:'ข้าวหอมมะลิ',unit:'กระติก'},
-{name:'ข้าวสาร',unit:'ถัง'}
-],
-
-'พี่หยี เช็คทุกวัน': [
-  { name: 'สันคอบด', unit: 'กิโลกรัม' }, { name: 'สันคอ', unit: 'กิโลกรัม' },
-{ name: 'ตับหมู', unit: 'กิโลกรัม' }, { name: 'โครงแก้ว', unit: 'กิโลกรัม' },
-{ name: 'ไส้อ่อน', unit: 'กิโลกรัม' }, { name: 'หมูสามชั้น', unit: 'กิโลกรัม' },
-{ name: 'เล้ง', unit: 'กิโลกรัม' }, { name: 'คอย่าง', unit: 'กิโลกรัม' },
-{ name: 'หนังหมู', unit: 'กิโลกรัม' }, { name: 'ลิ้นหมู', unit: 'กิโลกรัม' },
-{ name: 'กุ้งสด', unit: 'กิโลกรัม' }, { name: 'ปลาหมึก', unit: 'กิโลกรัม' },
-{ name: 'หอยแครง', unit: 'กิโลกรัม' },
-
-  { name: 'รายการเดือนละครั้ง', unit: '' },
-  { name: 'ถุงดำ', unit: 'แพค' }, { name: 'กระดาษไลแมน', unit: 'แถว'  },
-  {name: 'กระดาษเครื่องปริ้น', unit: 'กล่อง' },
-
- ],
-'ผักสด': [
-{name:'ข่า',unit:'ถุง'},
-{name:'ตะไคร้',unit:'ถุง'},
-{name:'ใบมะกรูด',unit:'ถุง'},
-{name:'กวางตุ้ง',unit:'ถุง'},
-{name:'ชะพลู',unit:'ถุง'},
-{name:'ชีลาว',unit:'ถุง'},
-{name:'ใบแมงลัก',unit:'ถุง'},
-{name:'สะระแหน่',unit:'ถุง'},
-{name:'พริกลาว',unit:'ถุง'},
-{name:'ใบย่านาง',unit:'ถุง'},
-{name:'บุ้งจีน',unit:'ถุง'},
-{name:'ผักกระเฉด',unit:'ถุง'},
-{name:'ชะอม',unit:'ถุง'},
-{name:'แตง',unit:'ถุง'},
-{name:'ฟักทอง',unit:'ถุง'},
-{name:'ปลาร้าถุง',unit:'ถุง'},
-{name:'รายการวันเว้นวัน',unit:''},
-{name:'หน่อไม้ซุป',unit:'ถุง'},
-{name:'หน่อไม้ตำ',unit:'ถุง'},
-{name:'น้ำย่านาง',unit:'ถุง'},
- ],
-'เข๋ง(เช็คทุกวัน)': [
-{name:'หอยดอง',unit:'ถุง'},
-{name:'ปูเค็ม',unit:'ถุง'},
-{name:'ถั่วงอก',unit:'ถุง'},
-{name:'ไข่เค็ม',unit:'แผง'},
-{name:'ไข่ไก่',unit:'แผง'}
- ],
-'ลา(เช็คทุกวัน)': [
-{name:'เนื้อย่าง',unit:'กิโลกรัม'},
-{name:'เนื้อลาบ',unit:'กิโลกรัม'},
-{name:'ผ้าขี้ริ้ว',unit:'นิ้วมือ'},
-{name:'ตับ',unit:'นิ้วมือ'},
-{name:'น่องลาย',unit:'ถุง'},
-{name:'ต้ม',unit:'ถ้วย'},
-{name:'พริกป่น',unit:'ถุง'},
-{name:'กระเทียม',unit:'ถุง'},
-{name:'พริกแห้ง',unit:'ถุง'}
- ]
-
-
+        { name:'ซีอิ๊วขาว',unit:'ขวด'},{ name:'ซอสหอย',unit:'ขวด'},{ name:'ฝาเขียว',unit:'ขวด'},
+        { name:'น้ำปลาเล็ก',unit:'ขวด'},{ name:'น้ำปลาใหญ่',unit:'ขวด'},{ name:'น้ำจิ้มไก่ใหญ่',unit:'ถุง'},
+        { name:'น้ำจิ้มไก่เล็ก',unit:'แพค'},{ name:'แป้งทอดกรอบ',unit:'ถุง'},{ name:'หนังยาง',unit:'ถุง'},
+        { name:'ทรายขาว',unit:'ถุง'},{ name:'ม้าบิน',unit:'ถุง'},{ name:'น้ำมัน',unit:'ถุง'},
+        { name:'ชูรส',unit:'ถุง'},{ name:'กะปิ',unit:'กระปุก'},{ name:'รสดีหมู',unit:'ถุง'},
+        { name:'นมสด',unit:'กระป๋อง'},{ name:'น้ำยาล้างล้างจาน',unit:'แกลลอน'},{ name:'น้ำยาล้างห้องน้ำ',unit:'แกลลอน'},
+        { name:'น้ำยาถูพื้น',unit:'แกลลอน'},{ name:'สบู่ล้างมือ',unit:'แกลลอน'},{ name:'ผงซักฟอก',unit:'ถุง'},
+        { name:'ทิชชู',unit:'แพค'},{ name:'หลอดสั้น',unit:'แพค'},{ name:'หลอดยาว',unit:'แพค'} , 
+        { name:'น้ำมะนาวขวด',unit:'ขวด'} , { name:'แอลกอฮอลล์',unit:'ถุง'} , { name:'กระเทียมเจียว',unit:'ถุง'}
+      ],
+      'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': [
+        {name:'กล่องล็อก',unit:'แพค'},{name:'ถ้วย 45',unit:'แพค'},{name:'กล่อง1000ml',unit:'แพค'},
+        {name:'ถ้วย 1 ออนซ์',unit:'แพค'},{name:'ถ้วย 2 ออนซ์',unit:'แพค'},{name:'สมุดฉีก',unit:'แพค'},
+        {name:'ช้อนพลาสติก',unit:'แพค'},{name:'ส้อมพลาสติก',unit:'แพค'},{name:'ไม้เสียบปลาดุก',unit:'ห่อ'},
+        {name:'ถุงเย็น ใส่ไก่',unit:'ห่อ'},{name:'12 × 20',unit:'ห่อ'},{name:'4 × 6',unit:'ห่อ'},
+        {name:'5 × 8',unit:'ห่อ'},{name:'6 × 9',unit:'ห่อ'},{name:'7 × 11',unit:'ห่อ'},
+        {name:'6 × 14',unit:'ห่อ'},{name:'7 × 15',unit:'ห่อ'},{name:'8 × 16',unit:'ห่อ'},
+        {name:'9 × 18',unit:'ห่อ'},{name:'มาม่า',unit:'ห่อ'},{name:'รสดีเนื้อ',unit:'ห่อ'},
+        {name:'พริกไทยเม็ด',unit:'ห่อ'},{name:'น้ำตาลปี๊บหนึ่งโล',unit:'ลัง'},{name:'น้ำตาลปี๊บครึ่งโล',unit:'ลัง'},
+        {name:'น้ำกระเทียมดอง',unit:'ขวด'},{name:'สิริพร',unit:'แพค'},{name:'ถั่วลิสง',unit:'มัด'},
+        {name:'เกลือห่อเล็ก',unit:'แพค'},{name:'เกลือห่อใหญ่',unit:'ห่อ'},{name:'ข้าวหอมมะลิ',unit:'กระติก'},
+        {name:'ข้าวสาร',unit:'ถัง'}
+      ],
+      'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': [
+        {name:'กะหล่ำ',unit:'ถุง'},{name:'มะเขือเทศ',unit:'ถุง'},{name:'หอมแขก',unit:'ถุง'},
+        {name:'มะละกอ',unit:'ถุง'},{name:'มะนาว',unit:'ถุง'},{name:'ถั่วฝักยาว',unit:'ถุง'},
+        {name:'พริกแดง',unit:'ถุง'},{name:'พริกเขียว',unit:'ถุง'},{name:'ต้นหอม',unit:'ถุง'},
+        {name:'โหระพา',unit:'ถุง'},{name:'ผักกาดสร้อย',unit:'ถุง'},{name:'ผักแพว',unit:'ถุง'},
+        {name:'บัวบก',unit:'ถุง'},{name:'หมูยอ',unit:'คู่'},{name:'บวบ',unit:'ถุง'},
+        {name:'มะเขือม่วง',unit:'ถุง'},{name:'มะเขือเล็ก',unit:'ถุง'},{name:'ผักบุ้งแดง',unit:'ถุง'},
+        {name:'ไหลบัว',unit:'ถุง'},{name:'ปูนา',unit:'ถุง'},{name:'หอยเชอรี่(ถามพี่หยี)',unit:'ถุง'},
+        {name:'ไข่มดแดง(ถามสำราญ)',unit:'ถุง'},{name:'เห็ดหูหนู(ถามสำราญ)',unit:'ถุง'},
+        {name:'เส้นเล็ก',unit:'ถุง'},{name:'กุ้งแห้ง (ถามเข๋ง)',unit:'ถุง'},{name:'มะขามเปียก',unit:'ถุง'},
+        {name:'ปาร้าขวด',unit:'ขวด'}
+      ],
+      'พี่หยี เช็คทุกวัน': [
+        { name: 'สันคอบด', unit: 'กิโลกรัม' }, { name: 'สันคอ', unit: 'กิโลกรัม' },
+        { name: 'ตับหมู', unit: 'กิโลกรัม' }, { name: 'โครงแก้ว', unit: 'กิโลกรัม' },
+        { name: 'ไส้อ่อน', unit: 'กิโลกรัม' }, { name: 'หมูสามชั้น', unit: 'กิโลกรัม' },
+        { name: 'เล้ง', unit: 'กิโลกรัม' }, { name: 'คอย่าง', unit: 'กิโลกรัม' },
+        { name: 'หนังหมู', unit: 'กิโลกรัม' }, { name: 'ลิ้นหมู', unit: 'กิโลกรัม' },
+        { name: 'กุ้งสด', unit: 'กิโลกรัม' }, { name: 'ปลาหมึก', unit: 'กิโลกรัม' },
+        { name: 'หอยแครง', unit: 'กิโลกรัม' },
+        { name: 'รายการเดือนละครั้ง', unit: '' },
+        { name: 'ถุงดำ', unit: 'แพค' }, { name: 'กระดาษไลแมน', unit: 'แถว'  },
+        { name: 'กระดาษเครื่องปริ้น', unit: 'กล่อง' }
+      ],
+      'ผักสด': [
+        {name:'ข่า',unit:'ถุง'},{name:'ตะไคร้',unit:'ถุง'},{name:'ใบมะกรูด',unit:'ถุง'},
+        {name:'กวางตุ้ง',unit:'ถุง'},{name:'ชะพลู',unit:'ถุง'},{name:'ชีลาว',unit:'ถุง'},
+        {name:'ใบแมงลัก',unit:'ถุง'},{name:'สะระแหน่',unit:'ถุง'},{name:'พริกลาว',unit:'ถุง'},
+        {name:'ใบย่านาง',unit:'ถุง'},{name:'บุ้งจีน',unit:'ถุง'},{name:'ผักกระเฉด',unit:'ถุง'},
+        {name:'ชะอม',unit:'ถุง'},{name:'แตง',unit:'ถุง'},{name:'ฟักทอง',unit:'ถุง'},
+        {name:'ปลาร้าถุง',unit:'ถุง'},{name:'รายการวันเว้นวัน',unit:''},{name:'หน่อไม้ซุป',unit:'ถุง'},
+        {name:'หน่อไม้ตำ',unit:'ถุง'},{name:'น้ำย่านาง',unit:'ถุง'}
+      ],
+      'เข๋ง(เช็คทุกวัน)': [
+        {name:'หอยดอง',unit:'ถุง'},{name:'ปูเค็ม',unit:'ถุง'},{name:'ถั่วงอก',unit:'ถุง'},
+        {name:'ไข่เค็ม',unit:'แผง'},{name:'ไข่ไก่',unit:'แผง'}
+      ],
+      'ลา(เช็คทุกวัน)': [
+        {name:'เนื้อย่าง',unit:'กิโลกรัม'},{name:'เนื้อลาบ',unit:'กิโลกรัม'},{name:'ผ้าขี้ริ้ว',unit:'นิ้วมือ'},
+        {name:'ตับ',unit:'นิ้วมือ'},{name:'น่องลาย',unit:'ถุง'},{name:'ต้ม',unit:'ถ้วย'},
+        {name:'พริกป่น',unit:'ถุง'},{name:'กระเทียม',unit:'ถุง'},{name:'พริกแห้ง',unit:'ถุง'}
+      ]
     };
-
-    function getUnitGroup_(unitStr){
-      const u = (unitStr || "").trim();
-      if (u === "กิโลกรัม/กรัม" || u === "กรัม/กิโลกรัม") return "weight_kg";
-      if (u === "ขวด/แพ็ค" || u === "ขวด/แพค") return "bottle_pack12";
-      if (u === "ขวด/ลัง") return "bottle_crate24";
-      return null;
-    }
 
     const ITEM_META_BY_NAME = (() => {
       const map = {};
@@ -801,17 +790,15 @@ const stockItems = {
       return map;
     })();
 
-    const UNIT_OPTIONS_BY_ITEM = {
-      "อกไก่": ["กิโลกรัม","กรัม"],
-      "ปลาหมึก": ["กิโลกรัม","กรัม"],
-      "กุ้ง": ["กิโลกรัม","กรัม"],
-      "สปาเก็ตตี้": ["กิโลกรัม","กรัม"],
-      "กากเจียว": ["กิโลกรัม","กรัม"]
-    };
+    function getUnitGroup_(unitStr){
+      const u = (unitStr || "").trim();
+      if (u === "กิโลกรัม/กรัม" || u === "กรัม/กิโลกรัม") return "weight_kg";
+      if (u === "ขวด/แพ็ค" || u === "ขวด/แพค") return "bottle_pack12";
+      if (u === "ขวด/ลัง") return "bottle_crate24";
+      return null;
+    }
 
     function getUnitOptions_(item){
-      const byName = UNIT_OPTIONS_BY_ITEM[item.name];
-      if (byName && Array.isArray(byName) && byName.length) return byName.slice();
       const u = String((item && item.unit) || "").trim();
       if (u.includes("/")) return u.split("/").map(s=>s.trim()).filter(Boolean);
       if (u === "กรัม" || u === "กิโลกรัม") return ["กรัม","กิโลกรัม"];
@@ -829,17 +816,14 @@ const stockItems = {
         if (u === 'กรัม') return { qty: n / 1000, unit: 'กิโลกรัม' };
         return { qty: n, unit: 'กิโลกรัม' };
       }
-
       if (opts.includes('ขวด') && opts.includes('ลัง')) {
         if (u === 'ลัง') return { qty: n * 24, unit: 'ขวด' };
         return { qty: n, unit: 'ขวด' };
       }
-
       if (opts.includes('ขวด') && (opts.includes('แพ็ค') || opts.includes('แพค'))) {
         if (u === 'แพ็ค') return { qty: n * 12, unit: 'ขวด' };
         return { qty: n, unit: 'ขวด' };
       }
-
       return { qty: n, unit: u };
     }
 
@@ -863,48 +847,31 @@ const stockItems = {
       return normalized.unit || unitSelected || unitDef || "";
     }
 
-function fmtQty(v){
-  if (v === null || v === undefined) return "";
-  if (typeof v === "string" && v.trim() === "") return "";
-
-  const n = Number(v);
-  if (!isFinite(n)) return String(v);
-
-  // แสดงทศนิยมสูงสุด 2 ตำแหน่ง
-  let s = n.toFixed(2);
-
-  // ตัด .00 หรือ 0 ท้าย
-  s = s.replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
-
-  return s;
-}
-
-    function shouldCeilDisplayByUnit_(unit){
-      const u = String(unit || "").trim();
-      return u !== "กรัม" && u !== "กิโลกรัม";
+    function fmtQty(v){
+      if (v === null || v === undefined) return "";
+      if (typeof v === "string" && v.trim() === "") return "";
+      const n = Number(v);
+      if (!isFinite(n)) return String(v);
+      let s = n.toFixed(2);
+      s = s.replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
+      return s;
     }
 
-function applyDisplayRounding_(qty){
-  const n = Number(qty);
-  if (!isFinite(n)) return qty;
+    function applyDisplayRounding_(qty){
+      const n = Number(qty);
+      if (!isFinite(n)) return qty;
+      return Math.round((n + Number.EPSILON) * 100) / 100;
+    }
 
-  // ปัดแบบมาตรฐาน + กัน floating point error (เช่น 0.255)
-  return Math.round((n + Number.EPSILON) * 100) / 100;
-}
-
-function getDisplayQty_(it){
-  const qtyRaw = (it && it.quantity !== undefined && it.quantity !== null) ? it.quantity : "";
-
-  const meta = (it && it.name) ? (ITEM_META_BY_NAME[it.name] || null) : null;
-  const unitDef = meta ? (meta.defaultUnit || "") : "";
-
-  const unitOptions = getUnitOptions_({ name: it?.name || "", unit: unitDef });
-  const unitSelected = (it && it.unit) ? String(it.unit).trim() : "";
-
-  const normalized = normalizeQtyToBase_(qtyRaw, unitSelected, unitOptions);
-
-  return applyDisplayRounding_(normalized.qty);
-}
+    function getDisplayQty_(it){
+      const qtyRaw = (it && it.quantity !== undefined && it.quantity !== null) ? it.quantity : "";
+      const meta = (it && it.name) ? (ITEM_META_BY_NAME[it.name] || null) : null;
+      const unitDef = meta ? (meta.defaultUnit || "") : "";
+      const unitOptions = getUnitOptions_({ name: it?.name || "", unit: unitDef });
+      const unitSelected = (it && it.unit) ? String(it.unit).trim() : "";
+      const normalized = normalizeQtyToBase_(qtyRaw, unitSelected, unitOptions);
+      return applyDisplayRounding_(normalized.qty);
+    }
 
     let currentCategory = '';
     let checkerName = '';
@@ -949,15 +916,6 @@ function getDisplayQty_(it){
       if (draft[category]) delete draft[category];
       saveDraft_(draft);
     }
-
-    const dataHandler = {
-      onDataChanged(data) {
-        allRecords = Array.isArray(data) ? data : [];
-        if (!document.getElementById('history-page').classList.contains('hidden')) {
-          renderHistory();
-        }
-      }
-    };
 
     let lastSheetSyncAt = 0;
 
@@ -1007,25 +965,20 @@ function getDisplayQty_(it){
     function parseQuantity_(raw) {
       const s = String(raw || "").trim();
       if (!s) return { ok: true, value: 0 };
-
       if (/^[+-]?\d*(?:\.\d+)?$/.test(s)) {
         const v = Number(s);
         if (Number.isFinite(v)) return { ok: true, value: v };
         return { ok: false, value: 0 };
       }
-
       const m = s.match(/^([+-]?\d*(?:\.\d+)?)\s*\/\s*(\d*(?:\.\d+)?)$/);
       if (m) {
-        const aStr = m[1];
-        const bStr = m[2];
+        const aStr = m[1]; const bStr = m[2];
         if (!aStr || aStr === "+" || aStr === "-") return { ok: false, value: 0 };
         if (!bStr) return { ok: false, value: 0 };
-        const a = Number(aStr);
-        const b = Number(bStr);
+        const a = Number(aStr); const b = Number(bStr);
         if (!Number.isFinite(a) || !Number.isFinite(b) || b === 0) return { ok: false, value: 0 };
         return { ok: true, value: a / b };
       }
-
       return { ok: false, value: 0 };
     }
 
@@ -1101,7 +1054,6 @@ function getDisplayQty_(it){
 
     function updateLanguage() {
       const t = translations[currentLanguage];
-
       document.getElementById('txt-daily-check').textContent = t.dailyCheck;
       document.getElementById('txt-history').textContent = t.history;
       document.getElementById('txt-date2').textContent = t.date2;
@@ -1109,6 +1061,8 @@ function getDisplayQty_(it){
       document.getElementById('cat-boat-desc').textContent = t.boatFrontDesc;
       document.getElementById('cat-food').textContent = t.customFood;
       document.getElementById('cat-food-desc').textContent = t.customFoodDesc;
+      document.getElementById('cat-ann').textContent = t.annCheck;
+      document.getElementById('cat-ann-desc').textContent = t.annCheckDesc;
       document.getElementById('cat-staff').textContent = t.staffChild;
       document.getElementById('cat-staff-desc').textContent = t.staffChildDesc;
 
@@ -1198,9 +1152,7 @@ function getDisplayQty_(it){
               { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); } },
               { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } }
             ],
-            borderables: [],
-            fontEditable: undefined,
-            fontSizeable: undefined
+            borderables: [], fontEditable: undefined, fontSizeable: undefined
           }),
           mapToEditPanelValues: (config) => new Map([
             ['shop_name', config.shop_name || defaultConfig.shop_name]
@@ -1225,8 +1177,24 @@ function getDisplayQty_(it){
     function selectCategory(category) {
       currentCategory = category;
       const badge = document.getElementById('category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
-      const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
+      const colors = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': 'bg-fuchsia-500', 
+        'พี่หยี เช็คทุกวัน': 'bg-blue-500', 
+        'ผักสด': 'bg-green-500', 
+        'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 
+        'ลา(เช็คทุกวัน)': 'bg-red-500' 
+      };
+      const icons = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': '👩', 
+        'พี่หยี เช็คทุกวัน': '🧑‍🍳', 
+        'ผักสด': '🥬', 
+        'เข๋ง(เช็คทุกวัน)': '🥗', 
+        'ลา(เช็คทุกวัน)': '🥩' 
+      };
 
       badge.className = `inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium mb-4 ${colors[category]}`;
       badge.innerHTML = `${icons[category]} ${tCategory(category)}`;
@@ -1250,7 +1218,15 @@ function getDisplayQty_(it){
       document.getElementById('display-date').textContent = formatDate(today, currentLanguage);
 
       const badge = document.getElementById('stock-category-badge');
-      const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 'พี่หยี เช็คทุกวัน': 'bg-blue-500', 'ผักสด': 'bg-green-500', 'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 'ลา(เช็คทุกวัน)': 'bg-red-500' };
+      const colors = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'bg-orange-500', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'bg-emerald-500', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': 'bg-fuchsia-500', 
+        'พี่หยี เช็คทุกวัน': 'bg-blue-500', 
+        'ผักสด': 'bg-green-500', 
+        'เข๋ง(เช็คทุกวัน)': 'bg-teal-500', 
+        'ลา(เช็คทุกวัน)': 'bg-red-500' 
+      };
       badge.className = `px-4 py-2 rounded-full text-white text-sm font-medium ${colors[currentCategory]}`;
       badge.textContent = tCategory(currentCategory);
 
@@ -1361,7 +1337,6 @@ function getDisplayQty_(it){
 
       try {
         const items = stockItems[currentCategory] || [];
-        const missingEls = [];
         const invalidEls = [];
 
         const stockEntries = items.map(item => {
@@ -1388,18 +1363,11 @@ function getDisplayQty_(it){
             name: item.name,
             required_qty: getRequiredQty_(item.name, currentCategory),
             order_qty: Math.max(0, getRequiredQty_(item.name, currentCategory) - qtyNum),
-            unit: norm.unit,
-            unit_input: unitInput,
-            unit_group: String(item.unit || '').trim(),
-            unit_options: unitOptions,
-            quantity_raw: raw,
-            quantity: norm.qty,
-            quantity_base: norm.qty,
+            unit: norm.unit, unit_input: unitInput, unit_group: String(item.unit || '').trim(), unit_options: unitOptions,
+            quantity_raw: raw, quantity: norm.qty, quantity_base: norm.qty,
             note: noteEl ? noteEl.value.trim() : ""
           };
         }).filter(x => !x.__section);
-
-        
 
         if (invalidEls.length) {
           invalidEls.forEach(el => el.classList.add("border-red-500"));
@@ -1435,21 +1403,15 @@ function getDisplayQty_(it){
 
         let sheetOk = false;
         try {
-          if (typeof GOOGLE_SHEET_WEBAPP_URL === "string" &&
-              GOOGLE_SHEET_WEBAPP_URL.startsWith("https://script.google.com/macros/s/")) {
-            const payload = {
-              __backendId: "web-" + Date.now().toString(),
-              ...record
-            };
+          if (typeof GOOGLE_SHEET_WEBAPP_URL === "string" && GOOGLE_SHEET_WEBAPP_URL.startsWith("https://script.google.com/macros/s/")) {
+            const payload = { __backendId: "web-" + Date.now().toString(), ...record };
             const resp = await withTimeout_(
               fetch(GOOGLE_SHEET_WEBAPP_URL, {
-                method: "POST",
-                mode: "no-cors",
+                method: "POST", mode: "no-cors",
                 headers: { "Content-Type": "text/plain;charset=utf-8" },
                 body: JSON.stringify(payload)
               }),
-              15000,
-              "SHEET_POST_TIMEOUT"
+              15000, "SHEET_POST_TIMEOUT"
             );
             sheetOk = !!resp;
           }
@@ -1472,257 +1434,220 @@ function getDisplayQty_(it){
       }
     }
 
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      msgEl.textContent = message;
+      toast.className = `fixed bottom-4 left-1/2 transform -translate-x-1/2 ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2 transition-all duration-300`;
+      toast.classList.remove('hidden');
+      setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+    }
 
-function showToast(message, type = 'success') {
-  const toast = document.getElementById('toast');
-  const msgEl = document.getElementById('toast-message');
-  msgEl.textContent = message;
-  toast.className = `fixed bottom-4 left-1/2 transform -translate-x-1/2 ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2 transition-all duration-300`;
-  setTimeout(() => { toast.classList.add('hidden'); }, 3000);
-}
+    function loadJSONP(url, callbackName) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        const sep = url.includes('?') ? '&' : '?';
+        script.src = `${url}${sep}callback=${callbackName}&_=${Date.now()}`;
+        window[callbackName] = function (data) {
+          try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
+          if (script.parentNode) script.parentNode.removeChild(script);
+          resolve(data);
+        };
+        script.onerror = function () {
+          try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
+          if (script.parentNode) script.parentNode.removeChild(script);
+          reject(new Error('JSONP failed'));
+        };
+        document.body.appendChild(script);
+      });
+    }
 
-// =========================
-// HISTORY LOADER FIX (JSONP)
-// =========================
+    async function fetchHistoryJSONP_() {
+      const cb = 'cb_' + Date.now();
+      const res = await loadJSONP(`${GOOGLE_SHEET_WEBAPP_URL}?action=list`, cb);
+      if (!res || !res.ok) throw new Error((res && res.error) || 'โหลดประวัติไม่สำเร็จ');
+      return (res.records || []).map(r => ({
+        ...r,
+        __backendId: r.backendId || r.__backendId || r.id || '',
+        items: r.items || r.items_json || '[]'
+      }));
+    }
 
-function loadJSONP(url, callbackName) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    const sep = url.includes('?') ? '&' : '?';
-    script.src = `${url}${sep}callback=${callbackName}&_=${Date.now()}`;
+    async function showHistory() {
+      showPage('history-page');
+      const listEl = document.getElementById('history-list');
+      const noHistory = document.getElementById('no-history');
+      listEl.innerHTML = `<div class="bg-white rounded-xl p-4 shadow-md text-center text-gray-500">กำลังโหลด...</div>`;
+      noHistory.classList.add('hidden');
+      try {
+        allRecords = await fetchHistoryJSONP_();
+        renderHistory();
+      } catch (err) {
+        console.error('showHistory JSONP error:', err);
+        listEl.innerHTML = `<div class="bg-white rounded-xl p-4 shadow-md text-center text-red-500">โหลดประวัติไม่สำเร็จ</div>`;
+      }
+    }
 
-    window[callbackName] = function (data) {
-      try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
-      if (script.parentNode) script.parentNode.removeChild(script);
-      resolve(data);
-    };
+    function filterHistory() { renderHistory(); }
 
-    script.onerror = function () {
-      try { delete window[callbackName]; } catch (_) { window[callbackName] = undefined; }
-      if (script.parentNode) script.parentNode.removeChild(script);
-      reject(new Error('JSONP failed'));
-    };
+    function renderHistory() {
+      const filterDate = document.getElementById('filter-date').value;
+      const filterCategory = document.getElementById('filter-category').value;
+      let filtered = [...(allRecords || [])];
 
-    document.body.appendChild(script);
-  });
-}
-
-async function fetchHistoryJSONP_() {
-  const cb = 'cb_' + Date.now();
-
-  const res = await loadJSONP(
-    `${GOOGLE_SHEET_WEBAPP_URL}?action=list`,
-    cb
-  );
-
-  if (!res || !res.ok) {
-    throw new Error((res && res.error) || 'โหลดประวัติไม่สำเร็จ');
-  }
-
-  return (res.records || []).map(r => ({
-    ...r,
-    __backendId: r.backendId || r.__backendId || r.id || '',
-    items: r.items || r.items_json || '[]'
-  }));
-}
-
-async function showHistory() {
-  showPage('history-page');
-
-  const listEl = document.getElementById('history-list');
-  const noHistory = document.getElementById('no-history');
-
-  listEl.innerHTML = `
-    <div class="bg-white rounded-xl p-4 shadow-md text-center text-gray-500">
-      กำลังโหลด...
-    </div>
-  `;
-  noHistory.classList.add('hidden');
-
-  try {
-    allRecords = await fetchHistoryJSONP_();
-    renderHistory();
-  } catch (err) {
-    console.error('showHistory JSONP error:', err);
-    listEl.innerHTML = `
-      <div class="bg-white rounded-xl p-4 shadow-md text-center text-red-500">
-        โหลดประวัติไม่สำเร็จ
-      </div>
-    `;
-  }
-}
-
-function filterHistory() { renderHistory(); }
-
-function renderHistory() {
-  const filterDate = document.getElementById('filter-date').value;
-  const filterCategory = document.getElementById('filter-category').value;
-
-  let filtered = [...(allRecords || [])];
-
-  if (filterDate) {
-    filtered = filtered.filter(r => {
-      const raw = String(r.date || '').trim();
-
-      // รองรับ yyyy-mm-dd
-      if (/^\d{4}-\d{2}-\d{2}/.test(raw)) {
-        return raw.slice(0, 10) === filterDate;
+      if (filterDate) {
+        filtered = filtered.filter(r => {
+          const raw = String(r.date || '').trim();
+          if (/^\d{4}-\d{2}-\d{2}/.test(raw)) return raw.slice(0, 10) === filterDate;
+          if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(raw)) {
+            const [dd, mm, yyyy] = raw.split('/');
+            return `${yyyy}-${String(mm).padStart(2, '0')}-${String(dd).padStart(2, '0')}` === filterDate;
+          }
+          const d = new Date(raw);
+          if (!isNaN(d.getTime())) return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().split('T')[0] === filterDate;
+          return false;
+        });
       }
 
-      // รองรับ dd/mm/yyyy
-      if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(raw)) {
-        const [dd, mm, yyyy] = raw.split('/');
-        const normalized = `${yyyy}-${String(mm).padStart(2, '0')}-${String(dd).padStart(2, '0')}`;
-        return normalized === filterDate;
+      if (filterCategory) filtered = filtered.filter(r => r.category === filterCategory);
+      filtered.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+      const listEl = document.getElementById('history-list');
+      const noHistory = document.getElementById('no-history');
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = '';
+        noHistory.classList.remove('hidden');
+        return;
       }
+      noHistory.classList.add('hidden');
 
-      const d = new Date(raw);
-      if (!isNaN(d.getTime())) {
-        const normalized = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().split('T')[0];
-        return normalized === filterDate;
-      }
+      const colors = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': 'from-fuchsia-500 to-fuchsia-600', 
+        'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' 
+      };
+      const icons = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': '👩', 
+        'พี่หยี เช็คทุกวัน': '🧑‍🍳', 
+        'ผักสด': '🥬', 
+        'เข๋ง(เช็คทุกวัน)': '🥗', 
+        'ลา(เช็คทุกวัน)': '🥩' 
+      };
 
-      return false;
-    });
-  }
-
-  if (filterCategory) filtered = filtered.filter(r => r.category === filterCategory);
-
-  filtered.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-
-  const listEl = document.getElementById('history-list');
-  const noHistory = document.getElementById('no-history');
-
-  if (filtered.length === 0) {
-    listEl.innerHTML = '';
-    noHistory.classList.remove('hidden');
-    return;
-  }
-
-  noHistory.classList.add('hidden');
-
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
-  const icons = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': '🚣', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': '🍳', 'พี่หยี เช็คทุกวัน': '🧑‍🍳', 'ผักสด': '🥬', 'เข๋ง(เช็คทุกวัน)': '🥗', 'ลา(เช็คทุกวัน)': '🥩' };
-
-  listEl.innerHTML = filtered.map(record => `
-    <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 bg-gradient-to-br ${colors[record.category] || 'from-gray-400 to-gray-500'} rounded-xl flex items-center justify-center text-2xl">
-          ${icons[record.category] || '📦'}
+      listEl.innerHTML = filtered.map(record => `
+        <div onclick="showHistoryDetail('${record.__backendId || record.id}')" class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all cursor-pointer">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br ${colors[record.category] || 'from-gray-400 to-gray-500'} rounded-xl flex items-center justify-center text-2xl">
+              ${icons[record.category] || '📦'}
+            </div>
+            <div class="flex-1">
+              <p class="font-semibold text-gray-800">${tCategory(record.category)}</p>
+              <p class="text-sm text-gray-500">${translations[currentLanguage].staffChecker} ${record.checker_name}</p>
+              <p class="text-sm text-gray-400">${formatFullDate(record.date, currentLanguage)}</p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
         </div>
-        <div class="flex-1">
-          <p class="font-semibold text-gray-800">${tCategory(record.category)}</p>
-          <p class="text-sm text-gray-500">${translations[currentLanguage].staffChecker} ${record.checker_name}</p>
-          <p class="text-sm text-gray-400">${formatFullDate(record.date, currentLanguage)}</p>
+      `).join('');
+    }
+
+    function showHistoryDetail(idOrBackendId) {
+      const record = (allRecords || []).find(r => (r.__backendId || r.id) === idOrBackendId);
+      if (!record) return;
+
+      window.__currentDetailRecord = idOrBackendId;
+      let items = [];
+      try { items = JSON.parse(record.items || '[]'); } catch (e) { items = []; }
+
+      const previousRecord = getPreviousRecord(record.category, record.date);
+      const t = translations[currentLanguage];
+      const colors = { 
+        'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 
+        'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 
+        'แอน(เช็คทุกวันอาทิตย์กับวันพฤหัส)': 'from-fuchsia-500 to-fuchsia-600', 
+        'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' 
+      };
+
+      const content = document.getElementById('history-detail-content');
+      content.innerHTML = `
+        <div class="bg-gradient-to-r ${colors[record.category] || 'from-gray-400 to-gray-500'} p-4 text-white">
+          <h3 class="text-xl font-bold mb-2">${tCategory(record.category)}</h3>
+          <p class="text-sm opacity-90">${t.staffChecker} <span class="font-semibold">${record.checker_name}</span></p>
+          <p class="text-sm opacity-90">${t.date} <span class="font-semibold">${formatFullDate(record.date, currentLanguage)}</span></p>
         </div>
-        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </div>
-    </div>
-  `).join('');
-}
-
-function showHistoryDetail(idOrBackendId) {
-  const record = (allRecords || []).find(r => (r.__backendId || r.id) === idOrBackendId);
-  if (!record) return;
-
-  window.__currentDetailRecord = idOrBackendId;
-
-  let items = [];
-  try {
-    items = JSON.parse(record.items || '[]');
-  } catch (e) {
-    console.error('parse items failed:', e);
-    items = [];
-  }
-
-  const previousRecord = getPreviousRecord(record.category, record.date);
-  const t = translations[currentLanguage];
-  const colors = { 'แม็คโครเช็คทุกวันอาทิตย์กับวันพฤหัส': 'from-orange-500 to-orange-600', 'เจ๊ปุ่นเช็กทุกวันอาทิตย์และพฤหัส': 'from-emerald-500 to-emerald-600', 'พี่หยี เช็คทุกวัน': 'from-blue-500 to-blue-600' };
-
-  const content = document.getElementById('history-detail-content');
-  content.innerHTML = `
-    <div class="bg-gradient-to-r ${colors[record.category] || 'from-gray-400 to-gray-500'} p-4 text-white">
-      <h3 class="text-xl font-bold mb-2">${tCategory(record.category)}</h3>
-      <p class="text-sm opacity-90">${t.staffChecker} <span class="font-semibold">${record.checker_name}</span></p>
-      <p class="text-sm opacity-90">${t.date} <span class="font-semibold">${formatFullDate(record.date, currentLanguage)}</span></p>
-    </div>
-    <div class="overflow-x-auto">
-      <table class="w-full">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.item}</th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องมี</th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.quantity}</th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.unit}</th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องสั่งเพิ่ม</th>
-            ${previousRecord ? `<th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.compared}<br><span class="text-xs font-normal">${formatDate(previousRecord.date, currentLanguage)}</span></th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changeLabel}</th>
-            <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changePctLabel}</th>` : ''}
-            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.note}</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-100">
-          ${items.map(item => {
-            let comparison = '';
-            let trend = '';
-            if (previousRecord) {
-              const prevItem = getItemFromRecord(previousRecord, item.name);
-              if (prevItem) {
-                const curBase = getComparableQty_(item);
-                const prevBase = getComparableQty_(prevItem);
-                const diff = curBase - prevBase;
-
-                if (diff > 0) trend = `<span class="trend-up">⬆ +${fmtQty(diff)}</span>`;
-                else if (diff < 0) trend = `<span class="trend-down">⬇ ${fmtQty(diff)}</span>`;
-                else trend = `<span class="trend-neutral">- ${t.noChange}</span>`;
-
-                let pctHtml = `<span class="text-gray-400">-</span>`;
-                if (prevBase > 0) {
-                  const pct = (diff / prevBase) * 100;
-                  const sign = pct > 0 ? "+" : "";
-                  const cls = pct > 0 ? "trend-up" : (pct < 0 ? "trend-down" : "trend-neutral");
-                  pctHtml = `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
-                } else if (prevBase === 0 && curBase !== 0) {
-                  pctHtml = `<span class="text-xs text-blue-600">${t.noPrevious}</span>`;
-                }
-
-                comparison = `<td class="px-4 py-3 text-center font-semibold text-gray-600">${fmtQty(getDisplayQty_(prevItem))} ${tUnit(getDisplayUnit_(prevItem))}</td>
-                              <td class="px-4 py-3 text-center font-semibold">${trend}</td>
-                              <td class="px-4 py-3 text-center font-semibold">${pctHtml}</td>`;
-              } else {
-                comparison = `<td class="px-4 py-3 text-center text-gray-400">-</td>
-                              <td class="px-4 py-3 text-center"><span class="text-xs text-blue-600">${t.noPrevious}</span></td>
-                              <td class="px-4 py-3 text-center"><span class="text-gra
-y-400">-</span></td>`;
-              }
-            }
-
-            const displayQty = getDisplayQty_(item);
-            const displayUnit = getDisplayUnit_(item);
-
-            return `
-              <tr class="hover:bg-gray-50">
-                <td class="px-4 py-3 font-medium text-gray-800">${tItem(item.name)}</td>
-                <td class="px-4 py-3 text-center font-semibold">${fmtQty(item.required_qty !== undefined ? item.required_qty : getRequiredQty_(item.name, record.category))}</td>
-                <td class="px-4 py-3 text-center font-semibold ${Number(displayQty || 0) > 0 ? 'text-green-600' : 'text-red-500'}">${fmtQty(displayQty)}</td>
-                <td class="px-4 py-3 text-center text-gray-600">${tUnit(displayUnit)}</td>
-                <td class="px-4 py-3 text-center font-semibold text-orange-600">${fmtQty(item.order_qty !== undefined ? item.order_qty : Math.max(0, getRequiredQty_(item.name, record.category) - Number(displayQty || 0)))}</td>
-                ${comparison}
-                <td class="px-4 py-3 text-gray-500">${item.note || '-'}</td>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.item}</th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องมี</th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.quantity}</th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.unit}</th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">จำนวนที่ต้องสั่งเพิ่ม</th>
+                ${previousRecord ? `<th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.compared}<br><span class="text-xs font-normal">${formatDate(previousRecord.date, currentLanguage)}</span></th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changeLabel}</th>
+                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">${t.changePctLabel}</th>` : ''}
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">${t.note}</th>
               </tr>
-            `;
-          }).join('')}
-        </tbody>
-      </table>
-    </div>
-  `;
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              ${items.map(item => {
+                let comparison = ''; let trend = '';
+                if (previousRecord) {
+                  const prevItem = getItemFromRecord(previousRecord, item.name);
+                  if (prevItem) {
+                    const curBase = getComparableQty_(item); const prevBase = getComparableQty_(prevItem);
+                    const diff = curBase - prevBase;
+                    if (diff > 0) trend = `<span class="trend-up">⬆ +${fmtQty(diff)}</span>`;
+                    else if (diff < 0) trend = `<span class="trend-down">⬇ ${fmtQty(diff)}</span>`;
+                    else trend = `<span class="trend-neutral">- ${t.noChange}</span>`;
 
-  showPage('history-detail-page');
-}
+                    let pctHtml = `<span class="text-gray-400">-</span>`;
+                    if (prevBase > 0) {
+                      const pct = (diff / prevBase) * 100;
+                      const sign = pct > 0 ? "+" : "";
+                      const cls = pct > 0 ? "trend-up" : (pct < 0 ? "trend-down" : "trend-neutral");
+                      pctHtml = `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
+                    } else if (prevBase === 0 && curBase !== 0) {
+                      pctHtml = `<span class="text-xs text-blue-600">${t.noPrevious}</span>`;
+                    }
+                    comparison = `<td class="px-4 py-3 text-center font-semibold text-gray-600">${fmtQty(getDisplayQty_(prevItem))} ${tUnit(getDisplayUnit_(prevItem))}</td>
+                                  <td class="px-4 py-3 text-center font-semibold">${trend}</td>
+                                  <td class="px-4 py-3 text-center font-semibold">${pctHtml}</td>`;
+                  } else {
+                    comparison = `<td class="px-4 py-3 text-center text-gray-400">-</td>
+                                  <td class="px-4 py-3 text-center"><span class="text-xs text-blue-600">${t.noPrevious}</span></td>
+                                  <td class="px-4 py-3 text-center"><span class="text-gray-400">-</span></td>`;
+                  }
+                }
+                const displayQty = getDisplayQty_(item);
+                const displayUnit = getDisplayUnit_(item);
+                return `
+                  <tr class="hover:bg-gray-50">
+                    <td class="px-4 py-3 font-medium text-gray-800">${tItem(item.name)}</td>
+                    <td class="px-4 py-3 text-center font-semibold">${fmtQty(item.required_qty !== undefined ? item.required_qty : getRequiredQty_(item.name, record.category))}</td>
+                    <td class="px-4 py-3 text-center font-semibold ${Number(displayQty || 0) > 0 ? 'text-green-600' : 'text-red-500'}">${fmtQty(displayQty)}</td>
+                    <td class="px-4 py-3 text-center text-gray-600">${tUnit(displayUnit)}</td>
+                    <td class="px-4 py-3 text-center font-semibold text-orange-600">${fmtQty(item.order_qty !== undefined ? item.order_qty : Math.max(0, getRequiredQty_(item.name, record.category) - Number(displayQty || 0)))}</td>
+                    ${comparison}
+                    <td class="px-4 py-3 text-gray-500">${item.note || '-'}</td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+      showPage('history-detail-page');
+    }
 
-init();
-</script>
+    init();
+  </script>
 </body>
 </html>
